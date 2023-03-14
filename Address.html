@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            /* width:  800px; */
+            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            /* position: relative; */
+            margin-top: 65px;
+            margin-bottom: 25px;
+            height: 640px
+        }
+        #text_content h1{
+            font-size: 38px;
+            margin-bottom: -15px;
+            
+        }
+        #text_content p{
+                color:  rgb(149, 140, 140);
+                font-size: large;
+        }
+        #Add_Address{
+            display: flex;
+            flex-direction: column;
+           
+            justify-content: center;
+           
+            align-items: center;
+            border: 1px dashed rgb(178, 176, 176);
+            width: 326px;
+            height: 148px;
+            padding: 24px;
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+            border-radius: 8px;
+            margin-right: 17px;
+        }
+
+        #Add_Address p{
+            font-size: 16px;
+            font-weight: 600;
+            color: rgb(232, 0, 113);
+            margin: 0px;
+        
+        }
+        #boxes{
+            display: flex;
+            margin-top: 35px;
+        }
+        #display_Add{
+            display: flex;
+            flex-direction: column;
+           
+            justify-content: center;
+            padding: 24px;
+           
+            
+            width: 326px;
+            height: 148px;
+            border:1px solid  rgb(198, 194, 194);
+            border-width: 1px;
+            border-radius: 8px;
+            background-color: rgb(255, 255, 255);
+          
+        }
+        #display_bag{
+            display: flex;
+            flex-direction: column;
+            width: 330px;
+            height: 230px;
+            margin: 0px 0px 0px 38px;
+            border: 1px solid red;
+            border-radius: 5px
+        }
+        #display_bag #Items, #price{
+            display: flex;
+            border: 2px dotted rgb(199, 220, 157);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            /* justify-content: ; */
+        }
+        #display_bag #Items img , #price img{
+            width: 25px;
+            height: 25px;
+            margin: 6px;
+            padding: 6px;
+        }
+       
+        #display_bag #Items p , #price p{
+            font-size: large;
+            font-weight: 700;
+            margin: 6px;
+            padding: 6px;
+        }
+        #display_bag #save p {
+           margin-top: 0px;
+           background-color: rgba(6, 135, 67, 0.1);
+           text-align: center;
+           color: rgb(6, 135, 67);
+        }
+        #authentic{
+            background: rgb(249, 250, 250);
+            display: flex;
+            justify-content: space-between;
+
+        }
+        #authentic p, img{
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            margin: 5px;
+            padding:10px;
+        }
+
+        /* form css  */
+        form{
+           display: grid;
+           grid-template-columns: repeat(1fr,1);
+            width: 400px;
+           margin: auto;
+          
+            padding: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        form input{
+            background: rgb(243, 244, 245);
+            border-width: 0px 0px 1px;
+            border-radius: 8px;
+            color: rgba(0, 19, 37, 0.92);
+            font-size: 16px;
+            font-weight: 400;
+           margin: 5px;
+           padding: 5px;
+        }
+        form #in6{
+            padding: 20px 12px 5px;
+            height: 50px;
+        }
+        form button{
+            padding: 12px;
+            border-style: solid;
+            border-width: 1px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            border-color: rgb(232, 0, 113);
+            background-color: rgb(232, 0, 113);
+            color: rgb(255, 255, 255);
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="parent">
+        <div id="text_content">
+            <h1>Choose Address</h1>
+            <p>Detailed address will help our delivery partner reach your doorstep quickly</p>
+        </div>
+
+        <div id="boxes">
+                    <div id="Add_Address">
+                        <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/plus-icon.svg" alt="+">
+                        <p>Add New Address</p>
+                    </div>
+
+                    <div id="display_Add"> 
+                            <!--  will append data -->
+                    </div>
+
+                    <div id="display_bag">
+                            <div id="Items">
+                                        <img src="data:image/png;base64,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"
+                                         alt="">
+
+                                        <p>Bag</p>
+
+                                        <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/down.svg" 
+                                        alt="">
+
+                            </div>
+
+                            <div id="price">
+                                    <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/ic_payment_details-03.svg"
+                                     alt="">
+                                     <p>Price</p>
+                                     <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/down.svg" 
+                                        alt="">
+                            </div>
+
+                            <div id="save">
+                                <p >You are saving <span> </span> on this order</p>
+                            </div>
+                          
+                            <div id="authentic">
+                                <p>Buy authentic products. Pay securely. Easy returns and exchange.</p>
+                                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/BuyerAssurance.svg"
+                                 alt="">
+                            </div>
+                    </div>
+    </div>
+    </div>
+</body>
+<script>
+    document.querySelector("#Add_Address").addEventListener("click" , Dis_form);
+
+    function Dis_form(){
+        var form = document.createElement("form");
+
+        var head = document.createElement("h2");
+        head.textContent = "New Address";
+        var head2 = document.createElement("h2");
+        head2.textContent = "Address";
+        
+        var in4 = document.createElement("input");  //address
+        in4.setAttribute("placeholder", "House No / Flat No");
+        in4.setAttribute("type", "text");
+        in4.setAttribute("id", "in4");
+
+        var in5 = document.createElement("input");  //pincode 
+        in5.setAttribute("placeholder", "pincode");
+        in5.setAttribute("type", "number");
+        in5.setAttribute("id", "in5");
+
+        var in6 = document.createElement("input");  //road name
+        in6.setAttribute("placeholder", "Road Nmae / Area / City ");
+        in6.setAttribute("id", "in6");
+        in6.setAttribute("type", "textarea");
+        
+
+        var head3 = document.createElement("h2");
+        head3.textContent = "Contact";
+        var in1 = document.createElement("input");  //name
+        in1.setAttribute("placeholder", "Name");
+        in1.setAttribute("type", "text");
+        in1.setAttribute("id", "in1");
+
+        var in2 = document.createElement("input"); //email
+        in2.setAttribute("id", "in2");
+        in2.setAttribute("placeholder", "email");
+        in2.setAttribute("type", "email");
+
+        var in3 = document.createElement("input");  //phone no
+        in3.setAttribute("placeholder", "Phone no");
+        in3.setAttribute("type", "number");
+        in3.setAttribute("id", "in3");
+       
+        var btt = document.createElement("button");//button
+        btt.textContent = "Ship to this Address";
+
+        form.append(head,head2,in5,in4,in6,head3,in1,in2,in3,btt);
+        document.querySelector("body").append(form);
+
+        // store in local store
+
+       document.querySelector("form").addEventListener("submit", address_add);
+    }
+
+    var Addpage = [];
+    function address_add(){
+    event.preventDefault();
+
+    var name = document.querySelector("#in1").value ;
+    var email = document.querySelector("#in2").value ;
+    var phone_no = document.querySelector("#in3").value ;
+    var address = document.querySelector("#in4").value ;
+    var pincode = document.querySelector("#in5").value ;
+    var road_no = document.querySelector("#in6").value ;
+
+    var page = {name:name, email:email, phone_no:phone_no, address:address, pincode:pincode, road_no:road_no};
+    Addpage.push(page);
+    localStorage.setItem("Address-data", JSON.stringify(Addpage));
+    console.log(Addpage);
+
+
+
+  }
+    
+</script>
+</html>
