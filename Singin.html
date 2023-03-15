@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="import"href="Login.html">
+   
     <title>Document</title>
 </head>
 <style>
@@ -55,7 +57,6 @@
         margin: 10px 0 0 0;
         background-color: #F3F3F3;
     }
-
     #login {
         width: 300px;
     }
@@ -64,7 +65,7 @@
         font-size: 15px;
     }
 
-    .button-separator > * {
+    #button-separator > * {
         margin-top: 160px;
         width: 100%;
         height: 50px;
@@ -87,6 +88,13 @@
         text-transform: uppercase;
         
     }
+    #container-2{
+        margin-top: 15Px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+   
+
 </style>
 
 <body>
@@ -101,56 +109,29 @@
                     </svg></button>
             </div>
             <div id="login">
-                <p>LOGIN / REGISTER</p>
+                <p>REGISTER</p>
             </div>
+        </div>
+        <div id="container-2">
+            <p>Register to Earn <span style="color:#fc2779;">2000  Reward Points!</span</p>
         </div>
         <form>
             <div>
-                <input name="emailMobile" value="" placeholder="Enter Email ID or Phone Number" id="email">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13">
-                    <title>success checkmark</title>
-                </svg>
-                <span class="help-msg">Required</span>
+                <input name="Name" value="" placeholder="NAME" id="email" required>
+                <!-- <input type="email" value="" id="email" placeholder="Enter email" name="email"> -->
+               
             </div>
-      <div class="button-separator">
-                <button >PROCEED</button>
+<div>   <input name="Mobile" value="" placeholder="Phone Number" id="email" required></div>
+<div>
+    <input name="email" value="" placeholder=" Email ID" id="email" required>
+</div>
+            <div id="button-separator">
+                <button id="submit">REGISTER</button>
+
             </div>
-            <p>Don't have an account? <a href="Singin.html">Sign up here.</a></p>
+            <p>Already have an account? <a href="Login.html">Login here.</a></p>
         </form>
+
     </div>
 </body>
-<script>
-
- document.querySelector("form").addEventListener("submit",function(){
-        event.preventDefault();
-      var email = document.getElementById("email").value;
-      console.log(email);
-      
-      var arr = JSON.parse(localStorage.getItem("users"));
-      var exist=arr.filter(function(elem){
-        return (email==elem.email);
-      });
-      console.log(exist);
-      
-      var signeduser = localStorage.getItem("signeduser") || "Signin";
-      var sw  = localStorage.getItem("switch") || false;
-
-      if(exist.length>0)
-      {
-        alert("login Succesful");
-        window.location.href="otp.html"
-        signeduser = email;
-        var sw  = true;
-        localStorage.setItem("switch",sw);
-        localStorage.setItem("signeduser",signeduser);
-      }
-      else{
-        window.location.href="otp.html"
-      }
-   
-    })
- 
-
-</script>
-
 </html>
