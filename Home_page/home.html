@@ -5,114 +5,464 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="//images-static.nykaa.com/media/favicon/default/nykaa_favicon_a.png" type="image/x-icon">
     <title>Buy Cosmetics Products &amp; Beauty Products Online in India at Best Price | Nykaa</title>
     <link rel="stylesheet" href="home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <div id="parent">
-        <div id="left">
-            <p>Spring Splash Sale - Up To 50% Off</p>
-        </div>
-        <div id="right">
-            <div>
-                <p class="nav"><img src="https://img.icons8.com/windows/1x/iphone-x.png" alt="mobile icon">
-                    Get App</p>
-            </div>
-            <div>
-                <p class="nav"><img src="https://img.icons8.com/ios/1x/marker.png" alt="store">
-                    Store & Events</p>
-            </div>
-            <div>
-                <p class="nav"><img src="https://img.icons8.com/ios/1x/gift-card.png" alt="giftcard">
-                    Gift Card</p>
-            </div>
-            <div>
-                <p><img src="https://img.icons8.com/ios/1x/help.png" alt="help">
-                    Help</p>
-            </div>
-        </div>
-    </div>
-    <div id="nav2">
-        <div>
-            <div id="left2">
-                <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAYfAGzocNyiGIeJAl_3u9CiqGs3SbXTa-DA&usqp=CAU"
-                        alt="logo">
-                </div>
-                <div>
-                    <p>Categories</p>
-                </div>
-                <div class="dropdownl2">
-                    <button class="dropbtnl2">Brands</button>
-                    <div class="dropdown-contentl2" style="left: -200px;">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                <div class="dropdownl2">
-                    <button class="dropbtnl2">Luxe</button>
-                    <div class="dropdown-contentl2" style="left: -270px;">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                <div class="dropdownl2">
-                    <button class="dropbtnl2">Nykaa Fashion</button>
-                    <div class="dropdown-contentl2" style="left: -340px;">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                <div class="dropdownl2">
-                    <button class="dropbtnl2">Beauty Advice</button>
-                    <div class="dropdown-contentl2" style="left: -480px;">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-            </div>
-            <div id="right2">
-                <div>
-                    <input type="text" id="searchbar" placeholder="Search on Nykaa">
-                </div>
-                <div class="innerright">
-                    <div class="dropdown">
-                        <button onclick="myFunction()" class="dropbtn">Sign in</button>
 
-                        <div id="myDropdown" class="dropdown-content">
-                            <div class="logtext">
-                                <p>Login / Create Account</p>
-                            </div>
-                            <div class="logtext2">
-                                <p>Register now and get <span>2000 Nykaa reward points instantly!</span></p>
-                            </div>
-                            <div id="signinbtn">
-                                <button>Sign in with Mobile / Email </button>
-                                <button>Google</button>
+    <header style="position: sticky; top: 0;">
+        <div id="parent">
+            <div id="left">
+                <p>Spring Splash Sale - Up To 50% Off</p>
+            </div>
+            <div id="right">
+                <div>
+                    <p class="nav"><img src="https://img.icons8.com/windows/1x/iphone-x.png" alt="mobile icon">
+                        Get App</p>
+                </div>
+                <div>
+                    <p class="nav"><img src="https://img.icons8.com/ios/1x/marker.png" alt="store">
+                        Store & Events</p>
+                </div>
+                <div>
+                    <p class="nav"><img src="https://img.icons8.com/ios/1x/gift-card.png" alt="giftcard">
+                        Gift Card</p>
+                </div>
+                <div>
+                    <p><img src="https://img.icons8.com/ios/1x/help.png" alt="help">
+                        Help</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="nav2">
+            <div>
+                <div id="left2">
+                    <div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAYfAGzocNyiGIeJAl_3u9CiqGs3SbXTa-DA&usqp=CAU"
+                            alt="logo">
+                    </div>
+                    <div>
+                        <p>Categories</p>
+                    </div>
+                    <div class="dropdownl2">
+                        <button class="dropbtnl2">Brands</button>
+                        <div class="dropdown-contentl2" style="left: -200px; height: 510px;">
+                            <div style="display: grid;grid-template-columns: repeat(2, 1fr);">
+                                <div>
+                                    <div style="height: 76px; width: 360px; background-color: white;">
+                                        <input type="text" id="searchbrand" placeholder="Search Brands">
+                                    </div>
+                                    <div id="btitle">
+                                        <p>TOPBRANDS</p>
+                                    </div>
+                                    <div id="bnames">
+                                        <div>
+                                            <p>Maybelline New York</p>
+                                        </div>
+                                        <div>
+                                            <p>Lakme</p>
+                                        </div>
+                                        <div>
+                                            <p>Nykaa Cosmetics</p>
+                                        </div>
+                                        <div>
+                                            <p>M.A.C</p>
+                                        </div>
+                                        <div>
+                                            <p>The Face Shop</p>
+                                        </div>
+                                        <div>
+                                            <p>L'Oreal Paris</p>
+                                        </div>
+                                        <div>
+                                            <p>Nykaa Naturals</p>
+                                        </div>
+                                        <div>
+                                            <p>Biotique</p>
+                                        </div>
+                                        <div>
+                                            <p>Huda Beauty</p>
+                                        </div>
+                                        <div>
+                                            <p>Kama Ayurveda</p>
+                                        </div>
+                                        <div>
+                                            <p>Innisfree</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <div id="brhead">
+                                        <button>POPULAR</button>
+                                        <button>LUXE</button>
+                                        <button>ONLY AT NYKAA</button>
+                                        <button>NEW LAUNCH</button>
+
+                                    </div>
+                                    <div id="br_image_holder">
+
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2019/Maybelline1211.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/lakme_mega_menu_header.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/cms/beauty/menu/nykaa-cosmetics.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/cms/beauty/menu/mac.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2019/lorealparis.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2020/BrandslogoMenubar/Huda.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2018/Biotique_new.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/cms/beauty/menu/natural-logo.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2018/Brandslogo/FacesCanadaa.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/HeaderIcons/The-Face-Shop.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2018/colorbar-logoforui.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2018/Brandslogo/nyx_New.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2018/Brandslogo/LOTUS-HERBALS.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2019/niveaa.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/cms/beauty/menu/clinique.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2018/neutrogena.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2020/BrandslogoMenubar/Estee-Lauder.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2020/Olay_logos.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/cms/beauty/menu/kay-beauty.png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2020/BrandslogoMenubar/Herbal-Essences.png"
+                                                alt="">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="cartbtn">
-                        <button><img src="https://cdn-icons-png.flaticon.com/128/6421/6421855.png"
-                                alt="baglogo"></button>
+                    <div class="dropdownl2">
+                        <button class="dropbtnl2">Luxe</button>
+                        <div class="dropdown-contentl2" style="left: -270px; background-color: white;">
+                            <div>
+                                <div id="luxeBtn">
+                                    <button>Makeup</button>
+                                    <button>Skin</button>
+                                    <button>fragrance</button>
+                                    <button>Hair</button>
+                                    <button>Bath & Body</button>
+                                    <button>Gift</button>
+                                    <button>Trending Now</button>
+                                    <button>New Launches</button>
+                                    <button>Minis</button>
+                                </div>
+                                <div id="luxe_disc">
+                                    <div>
+                                        <h4>Makeup Collection</h4>
+                                        <p>Face</p>
+                                        <p>Foundation</p>
+                                        <p>Compact</p>
+                                        <p>Highlighter</p>
+                                        <p>Setting Spray</p>
+                                        <p>Primer</p>
+                                        <p>Concealear</p>
+                                        <p>Blush</p>
+                                        <p>Loose Powder</p>
+                                        <p>Bronzer</p>
+                                        <p>Makeup Remover</p>
+                                        <p>Tinted Moisturizer</p>
+                                        <p>Contouring</p>
+                                    </div>
+                                    <div style="background-color: whitesmoke;">
+                                        <h4>Eyes</h4>
+                                        <p>Eye Shadow</p>
+                                        <p>Mascara</p>
+                                        <p>Eyeliner & Kajal</p>
+                                        <p>Brows</p>
+                                        <p>Eye Primer</p>
+                                        <p>Conclealer</p>
+                                        <p>Lashes</p>
+                                    </div>
+                                    <div>
+                                        <h4>Lips</h4>
+                                        <p>Lipstick</p>
+                                        <p>Liquid Lipstick</p>
+                                        <p>Lip Balm</p>
+                                        <p>Lip Plumper</p>
+                                        <p>Lip Liner</p>
+                                        <p>Lip Tint</p>
+                                        <h4>Nails</h4>
+                                        <p>Nail Polish</p>
+                                        <p>Nail Care</p>
+                                        <p>Nail Polish Remover</p>
+                                    </div>
+                                    <div style="background-color: whitesmoke;">
+                                        <h4>Tools & Brushes</h4>
+                                        <p>Face Brush</p>
+                                        <p>Eye Brush</p>
+                                        <p>Applicators</p>
+                                        <p>Lip Brush</p>
+                                    </div>
+                                    <div>
+                                        <h4>Makeup Kits</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="dropdownl2">
+                        <button class="dropbtnl2">Nykaa Fashion</button>
+                        <div class="dropdown-contentl2" style="left: -340px; background-color: white; height: 480px;">
+                            <div style="display: flex;">
+                                <div id="nyk_fashion">
+                                    <div>
+                                        <h4>Women</h4>
+                                        <p>Indianwear</p>
+                                        <p>Westernwear</p>
+                                        <p>Footwear</p>
+                                        <p>Bags</p>
+                                        <p>Lingeries</p>
+                                        <p>Sportswear</p>
+                                        <p>Sleep & Lounge</p>
+                                        <p>Jewellery</p>
+                                        <p>Watches</p>
+                                        <p>Accessories</p>
+                                    </div>
+                                    <div style="background-color: whitesmoke">
+                                        <h4>Men</h4>
+                                        <p>Topwear</p>
+                                        <p>Bottomwear</p>
+                                        <p>Ethnicwear</p>
+                                        <p>Footwear</p>
+                                        <p>Sportswear</p>
+                                        <p>Sleepwear</p>
+                                        <p>Jewellery</p>
+                                        <h4>Tech</h4>
+                                        <p>Smart Watches</p>
+                                        <p>Headphones</p>
+                                        <p>Speakers</p>
+                                        <p>Power Bank</p>
+                                    </div>
+                                    <div>
+                                        <h4>Kids</h4>
+                                        <p>Indianwear</p>
+                                        <p>Westernwear</p>
+                                        <p>Footwear</p>
+                                        <p>Toys & Games</p>
+                                        <p>Feeding</p>
+                                        <p>Sportswear</p>
+                                        <p>Sleep</p>
+                                        <h4>Home</h4>
+                                        <p>Kitchen & Dining</p>
+                                        <p>Floor Coverings</p>
+                                        <p>Storage</p>
+                                        <p>Bath</p>
+                                        <p>Bedding</p>
+                                    </div>
+                                    <div style="background-color: whitesmoke">
+                                        <h4>House Of Nykaa</h4>
+                                        <p>Gajra Gang</p>
+                                        <p>RSVP By Nykaa Fashion</p>
+                                        <p>Twenty Dresses By Nykaa Fashion</p>
+                                        <p>MIXT</p>
+                                        <p>Azai By Nykaa Fashion</p>
+                                        <p>Nyri</p>
+                                        <p>Gloot</p>
+                                        <p>Likha By Nykaa Fashion</p>
+                                        <p>Twig And Twine</p>
+                                        <p>Kica</p>
+                                        <p>IYKYK By Nykaa Fashion</p>
+                                        <p>Pipa Bella</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="https://www.nykaa.com/media/wysiwyg/2022/Fashion-mega-menu-a.jpeg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdownl2">
+                        <button class="dropbtnl2">Beauty Advice</button>
+                        <div class="dropdown-contentl2" style="left: -480px; height: 300px; background-color: white;">
+                            <div id="butAdvice">
+                                <div>
+                                    <img src="https://adn-static2.nykaa.com/media/wysiwyg/beautybook_2img.jpg" alt="">
+                                    <h4>BEAUTY BOOK</h4>
+                                    <p>Nykaa's Digital Magazine</p>
+                                </div>
+                                <div>
+                                    <img src="https://adn-static2.nykaa.com/media/wysiwyg/megamenu/nykaatv_1_img.png"
+                                        alt="">
+                                    <h4>NYKAA TV</h4>
+                                    <p>Masterclasses By Experts & Vloggers</p>
+                                </div>
+                                <div>
+                                    <img src="https://images-static.naikaa.com/media/wysiwyg/2021/Buying-Guide-Mega-menu-new.jpg"
+                                        alt="">
+                                    <h4>BEAUTY BUYING GUIDES</h4>
+                                    <p>Tips To Explore While You Shop</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="right2">
+                    <div>
+                        <input type="text" id="searchbar" placeholder="Search on Nykaa">
+                    </div>
+                    <div class="innerright">
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn">Sign in</button>
+
+                            <div id="myDropdown" class="dropdown-content">
+                                <div class="logtext">
+                                    <p>Login / Create Account</p>
+                                </div>
+                                <div class="logtext2">
+                                    <p>Register now and get <span>2000 Nykaa reward points instantly!</span></p>
+                                </div>
+                                <div id="signinbtn">
+                                    <button>Sign in with Mobile / Email </button>
+                                    <button>Google</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="cartbtn">
+                            <button><img src="https://cdn-icons-png.flaticon.com/128/6421/6421855.png"
+                                    alt="baglogo"></button>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
+        </div>
+    </header>
+    <div style="box-shadow: rgba(0, 0, 0, 0.10) 0px 3.50px 0px;">
+        <div id="nav3">
+            <div class="nav3_ch">
+                <div>
+                    <button class="nav3btn">Makeup</button>
+                </div>
+                <div>
+                    <button class="nav3btn">Skin</button>
+                </div>
+                <div>
+                    <button class="nav3btn">Hair</button>
+                </div>
+                <div>
+                    <button class="nav3btn">Appliances</button>
+                </div>
+                <div>
+                    <button class="nav3btn">Bath</button>
+                </div>
+                <div>
+                    <button class="nav3btn">Natural</button>
+                </div>
 
+                <div>
+                    <button class="nav3btn">Health</button>
+                </div>
+                <div>
+                    <button class="nav3btn">Men</button>
+                </div>
+                <div>
+                    <button class="nav3btn">Fragrance</button>
+                </div>
+                <div>
+                    <button class="nav3btn">Pop Ups</button>
+                </div>
+                <div>
+                    <img src="sale.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="middle_cont">
+        <div>
+            <h1>Best In Beauty</h1>
+        </div>
+        <div>
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" style="height: 250px; width: 200px;">
+                    <img src="https://images-static.nykaa.com/uploads/6a09f1ce-603a-4d6e-a7c1-9b8ce9e1021f.jpg?tr=w-600,cm-pad_resize" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images-static.nykaa.com/uploads/893ce664-7ead-47eb-aff8-7f5fe431f048.gif?tr=w-600,cm-pad_resize" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images-static.nykaa.com/uploads/acefd44d-07bd-4681-a534-096e4aff3f0d.jpg?tr=w-600,cm-pad_resize" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </div>
     </div>
 
 </body>
 
 </html>
-
-
 
 <script>
     var _hmt = _hmt || [];
@@ -122,8 +472,7 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
-    /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
+
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
