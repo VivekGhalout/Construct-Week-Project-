@@ -134,4 +134,33 @@
 
     </div>
 </body>
+<script>
+   document.querySelector("form").addEventListener("submit",function(){
+        event.preventDefault();
+      var email = document.getElementById("email").value;
+      console.log(email);
+      
+      var arr = JSON.parse(localStorage.getItem("users"));
+      var exist=arr.filter(function(elem){
+        return (email==elem.email);
+      });
+      console.log(exist);
+      
+      var signeduser = localStorage.getItem("signeduser") || "Signin";
+      var sw  = localStorage.getItem("switch") || false;
+
+      if(exist.length>0)
+      {
+        alert("login Succesful");
+        window.location.href="Login.html"
+        signeduser = email;
+        var sw  = true;
+        localStorage.setItem("switch",sw);
+        localStorage.setItem("signeduser",signeduser);
+      }
+      else{
+        window.location.href="Login.html"
+      }
+    });  
+</script>
 </html>

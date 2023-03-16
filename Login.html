@@ -64,16 +64,16 @@
         font-size: 15px;
     }
 
-    .button-separator > * {
+    .button-separator>* {
         margin-top: 160px;
         width: 100%;
         height: 50px;
         background-color: #FC2779;
-        color:white;
+        color: white;
         font: sans-serif;
         font-weight: 600;
         letter-spacing: 1.8px;
-        border:none;
+        border: none;
         cursor: pointer;
     }
 
@@ -85,7 +85,7 @@
         bottom: 0;
         text-align: right;
         text-transform: uppercase;
-        
+
     }
 </style>
 
@@ -112,45 +112,43 @@
                 </svg>
                 <span class="help-msg">Required</span>
             </div>
-      <div class="button-separator">
-                <button >PROCEED</button>
+            <div class="button-separator">
+                <button> PROCEED </button>
             </div>
-            <p>Don't have an account? <a href="Singin.html">Sign up here.</a></p>
+            <p>Don't have an account? <a href="Sign in .html">Sign up here.</a></p>
         </form>
     </div>
 </body>
-<script>
-
- document.querySelector("form").addEventListener("submit",function(){
-        event.preventDefault();
-      var email = document.getElementById("email").value;
-      console.log(email);
-      
-      var arr = JSON.parse(localStorage.getItem("users"));
-      var exist=arr.filter(function(elem){
-        return (email==elem.email);
-      });
-      console.log(exist);
-      
-      var signeduser = localStorage.getItem("signeduser") || "Signin";
-      var sw  = localStorage.getItem("switch") || false;
-
-      if(exist.length>0)
-      {
-        alert("login Succesful");
-        window.location.href="otp.html"
-        signeduser = email;
-        var sw  = true;
-        localStorage.setItem("switch",sw);
-        localStorage.setItem("signeduser",signeduser);
-      }
-      else{
-        window.location.href="otp.html"
-      }
-   
-    })
- 
-
-</script>
 
 </html>
+<script>
+
+    document.querySelector("form").addEventListener("submit", function () {
+        event.preventDefault();
+        var email = document.getElementById("email").value;
+        console.log(email);
+
+        var arr = JSON.parse(localStorage.getItem("users"));
+        var exist = arr.filter(function (elem) {
+            return (email == elem.email);
+        });
+        console.log(exist);
+
+        var signeduser = localStorage.getItem("signeduser") || "Signin";
+        var sw = localStorage.getItem("switch") || false;
+
+        if (exist.length > 0) {
+            alert("login Succesful");
+            window.location.href = "otp.html"
+            signeduser = email;
+            var sw = true;
+            localStorage.setItem("switch", sw);
+            localStorage.setItem("signeduser", signeduser);
+        }
+        else {
+            window.location.href = "otp.html"
+        }
+
+    })
+
+</script>
