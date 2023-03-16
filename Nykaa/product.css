@@ -1,0 +1,130 @@
+#main_div {
+    width: 85%;
+    margin: auto;
+    /* border: 5px solid red; */
+}
+.mid_heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 650;
+    margin-top: 30px;
+}
+#single_slider {
+    width: 100%;
+}
+#crosil_div_btn {
+    display: flex;
+    justify-content: space-between;
+}
+.carousel-control-prev, .carousel-control-next{
+    position: absolute;
+    margin-top: -50px;
+}
+#all_pro_div {
+    display: flex;
+    border: 2px solid blue;
+    height: 800px;
+    justify-content: space-between;
+}
+#sort_cat_sec{
+    border: 2px solid yellow;
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+}
+#sort_by > #filter{
+    width: 88%;
+    margin-left: 15px;
+    height: 53px;
+    display: block;
+}
+#cat_list{
+    /* border: 2px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+#cat_list > #cat_child {
+    height: 53px;
+}
+#proside {
+    border: 2px solid purple;
+    width: 77%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+#card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* border: 2px solid orange; */
+    border-radius: 8px;
+    background-color: white;
+}
+#card > img {
+    border-radius: 8px 8px 0px 0px;
+}
+
+#card>p {
+    font-family: inter, sans-serif;
+    font-size: 15px;
+    /* font-weight: 600; */
+}
+.sprice {
+    text-decoration: line-through;
+    padding-right: 5px;
+    color: #0013255e;
+}
+.price {
+    padding-right: 5px;
+    color: black;
+}
+.off{
+    color: #068743;
+}
+#card > p:nth-child(2) {
+    letter-spacing: 1px;
+}
+#card > p:nth-child(4) {
+    color: #fc2779;
+    margin-top: -2px;
+    margin-bottom: 1px;
+}
+#card > p:nth-child(3) {
+    color: #0013255e;
+}
+#card > a > button {
+    height: 50px;
+    border-radius: 0px 0px 8px 8px;
+    border: none;
+    width: 100%;
+    color: white;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+#card > a > button:hover{
+    background-color: #fc2779;
+}
+#card > span {
+    font-size: 20px;
+}
+
+
+@media only screen and (min-width: 451px) and (max-width: 950px) {
+    #proside {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* small screens */
+@media only screen and (min-width: 0px) and (max-width: 450px) {
+    #proside {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
