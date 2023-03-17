@@ -1,0 +1,202 @@
+
+body{
+    margin: 0px;
+    }
+
+    /* navbar starts */
+div > nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+   
+}
+div > nav > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#navbar_Address{
+padding: 4px;
+box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+}
+  /* navbar Ends */
+
+#parent{
+    
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;   
+    margin-top: 20px;
+    margin-bottom: 25px;
+    height: auto;
+}
+
+#text_content h1{
+    font-size: 38px;
+    margin-bottom: -10px;
+    
+}
+#text_content #Detail{
+        color:  rgb(149, 140, 140);
+        font-size: large;
+}
+#Add_Address{
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: center;
+   
+    align-items: center;
+    border: 1px dashed rgb(178, 176, 176);
+    width: 326px;
+    height: 148px;
+    padding: 24px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 8px;
+    margin-right: 17px;
+}
+
+#Add_Address p{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(232, 0, 113);
+    margin: 0px;
+
+}
+#boxes{
+    display: flex;
+    margin-top: 35px;
+}
+#display_Add{
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: center;
+    padding: 24px;
+   
+    
+    width: 326px;
+    height: 148px;
+    border:1px solid  rgb(198, 194, 194);
+    border-width: 1px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+  
+}
+#display_bag{
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: auto;
+    margin: 0px 0px 0px 38px;
+    
+    border-radius: 5px
+}
+
+#display_bag #authentic{
+    background: rgb(249, 250, 250);
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid  rgb(198, 194, 194);
+
+}
+#authentic p, img{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 5px;
+    padding:10px;
+}
+
+/* form Starts */
+form{
+    position: relative;
+   display: grid;
+   grid-template-columns: repeat(1fr,1);
+    width: 400px;
+   margin: auto;
+  
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+form input{
+    background: rgb(243, 244, 245);
+    border-width: 0px 0px 1px;
+    border-radius: 8px;
+    color: rgba(0, 19, 37, 0.92);
+    font-size: 16px;
+    font-weight: 400;
+   margin: 5px;
+   padding: 5px;
+}
+form #in6{
+    padding: 20px 12px 5px;
+    height: 50px;
+}
+form button{
+    padding: 12px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    border-color: rgb(232, 0, 113);
+    background-color: rgb(232, 0, 113);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+/* Form ends */
+
+/* Displaying Address Starts*/
+#display_Add h4,#gotoadd,#gotopay{
+    margin: 1px;
+    
+
+}
+
+#display_Add #gotopay{
+    border-style: solid;
+    padding: 5px;
+  
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 10px;
+   
+    border-color: rgb(232, 0, 113);
+    background-color: rgb(232, 0, 113);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+}
+#display_Add #gotoadd{
+    margin-top: 2px;
+   
+}
+/* Displaying Address ends */
+
+
+/* Displaying carts products */
+.Display_cart{
+position: relative;
+display: flex;
+margin: 10px;
+align-items: center;
+}
+.Display_cart img{
+width: 200px;
+}
+.Display_cart img , p,h4{
+margin: 10px;
+}
+
