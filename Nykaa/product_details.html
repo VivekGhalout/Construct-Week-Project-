@@ -478,12 +478,12 @@
         <div id="all_pro_div">
             <div id="sort_cat_sec">
                 <div id="sort_by">
-                    <select id="filter">
+                    <select id="filter" onchange="handle_sort()">
                         <option value="">Sort By</option>
                         <option value="Name">Name</option>
+                        <option value="lth">Price: Low To High</option>
+                        <option value="htl">Price: High To Low</option>
                         <option value="Discount">Discount</option>
-                        <option value="Price: High To Low">Price: High To Low</option>
-                        <option value="Price: Low To High">Price: Low To High</option>
                         <option value="Popularity">Popularity</option>
                         <option value="New Arrivals">New Arrivals</option>
                     </select>
@@ -533,5 +533,6 @@
 
 
 </body>
+<script src="product_details.js"></script>
 
 </html>

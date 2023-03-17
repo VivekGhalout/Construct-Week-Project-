@@ -39,39 +39,48 @@
         border-radius: 8px;
         background-color: white;
     }
-    #card > img {
-        border-radius: 8px 8px 0px 0px;
-    }
 
-    #card>p {
-        font-family: inter, sans-serif;
-        font-size: 15px;
-        /* font-weight: 600; */
+    #card>img {
+        border-radius: 8px 8px 0px 0px;
     }
     .sprice {
         text-decoration: line-through;
         padding-right: 5px;
         color: #0013255e;
     }
+
     .price {
         padding-right: 5px;
         color: black;
     }
-    .off{
+
+    .off {
         color: #068743;
     }
-    #card > p:nth-child(2) {
+
+    #pro_name {
         letter-spacing: 1px;
+        font-family: inter, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 30px;
+        padding: 0px 20px;
     }
-    #card > p:nth-child(4) {
+
+    #enj_msg {
         color: #fc2779;
         margin-top: -2px;
-        margin-bottom: 1px;
+        margin-bottom: 4px;
     }
-    #card > p:nth-child(3) {
+
+    #price_div {
         color: #0013255e;
+        font-family: inter, sans-serif;
+        font-size: 14px;
+        margin-bottom: -30px;
     }
-    #card > a > button {
+
+    #card>a>button {
         height: 50px;
         border-radius: 0px 0px 8px 8px;
         border: none;
@@ -81,13 +90,16 @@
         font-size: 16px;
         font-weight: 600;
     }
-    #card > a > button:hover{
+
+    #card>a>button:hover {
         background-color: #fc2779;
     }
-    #card > span {
+
+    #rating {
         font-size: 20px;
+        margin-bottom: 15px;
     }
-    
+
 
     @media only screen and (min-width: 451px) and (max-width: 950px) {
         #proside {
@@ -113,13 +125,20 @@
             <div id="card">
                 <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/7/b72d212NYKAC00000637_1a.jpg"
                     alt="">
-                <p>Nykaa Cosmetics Glamoreyes Color Eye</p>
-                <p>MRP:<span class="sprice">₹998</span><span class="price">₹798</span><span class="off">20% Off</span>
+                <p id="pro_name">Nykaa Cosmetics Glamoreyes Color Eye</p>
+                <div id="price_div">
+                    <p>MRP:<span class="sprice">₹998</span><span class="price">₹798</span><span class="off">20%
+                            Off</span>
+                </div>
                 </p>
-                <p>Enjoy Free Gift</p>
-                <span>★★★★★</span>
+                <p id="enj_msg">Enjoy Free Gift</p>
+                <span id="rating">★★★★★</span>
                 <a href=""><button>Product Preview</button></a>
             </div>
+
+
+
+            
             <div id="card">
                 <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/7/b72d212NYKAC00000637_1a.jpg"
                     alt="">
