@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="Address.css">
     
 </head>
-<body>
+<body style="font-family: inter, sans-serif;">
     <div id="navbar_Address">
         <nav>
             <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/nykaa-logo.svg"
@@ -46,39 +46,27 @@
                     </div>
 
                     <div id="display_bag">
-                            
+                            <div id="bag">
+                                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/Icon.svg"
+                                 alt="">
+                                 <h3>Bag</h3>
+                                 <!-- <span style="margin-left: 100px; margin-top: 20px; font-weight: 600;">  3 Items </span> -->
+                            </div>
+                            <div id="price">
+                                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/ic_payment_details-03.svg"
+                                 alt="">
+                                 <h3>Price</h3>
+                                 <!-- <span style="margin-left: 100px; margin-top: 20px; font-weight: 600;">432534 </span> -->
+                            </div>
                             <div id="authentic">
                                 <p>Buy authentic products. Pay securely. Easy returns and exchange.</p>
                                 <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/BuyerAssurance.svg"
-                                 alt="">
+                                 alt="" onclick="">
                             </div>
                     </div>
         </div> <!-- //boxes -->
 
-        <div>
-            <div class="Display_cart">
-                <img src="https://images-static.nykaa.com/uploads/a600efcb-e95f-454b-9243-a3bbbe766907.jpg?tr=w-400,cm-pad_resize"
-                alt="">
-                <p>cosmetics lipstick foundation and so on</p>
-                <h4>₹<span>1200</span></h4>
-                
-            </div>
-            <div class="Display_cart">
-                <img src="https://images-static.nykaa.com/uploads/a600efcb-e95f-454b-9243-a3bbbe766907.jpg?tr=w-400,cm-pad_resize"
-                alt="">
-                <p>cosmetics lipstick foundation and so on</p>
-                <h4>₹<span>1200</span></h4>
-                
-            </div>
-            <div class="Display_cart">
-                <img src="https://images-static.nykaa.com/uploads/a600efcb-e95f-454b-9243-a3bbbe766907.jpg?tr=w-400,cm-pad_resize"
-                alt="">
-                <p>cosmetics lipstick foundation and so on</p>
-                <h4>₹<span>1200</span></h4>
-                
-            </div>
-
-        </div>
+       
 
     </div>
 </body>
@@ -86,14 +74,28 @@
     document.querySelector("#Add_Address").addEventListener("click" , Dis_form);
 
    
-
     function Dis_form(){
         var form = document.createElement("form");
 
+       
+
+        var close_img = document.createElement("img");
+        close_img.setAttribute("id", "close_id")
+        close_img.setAttribute("src", "https://adn-static1.nykaa.com/media/wysiwyg/Payments/Clear.svg");
+        close_img.style.width = "30px";
+        close_img.setAttribute("onclick" , "closeForm()");
+
         var head = document.createElement("h2");
         head.textContent = "New Address";
+
+        var div = document.createElement("div");
+        div.append(close_img,head);
+       div.setAttribute("id", "close&head");
+       div.style.display = "flex";
+
         var head2 = document.createElement("h2");
         head2.textContent = "Address";
+
         
         var in4 = document.createElement("input");  //address
         in4.setAttribute("placeholder", "House No / Flat No");
@@ -133,19 +135,35 @@
         var btt = document.createElement("button");//button
         btt.textContent = "Ship to this Address";
 
-        form.append(head,head2,in5,in4,in6,head3,in1,in2,in3,btt);
+        form.append(div,head2,in5,in4,in6,head3,in1,in2,in3,btt);
         document.querySelector("body").append(form);
 
         // store in local store
 
        document.querySelector("form").addEventListener("submit", address_add);
+
+        
+
     }
+   
+    function closeForm()
+    {
+        console.log("Close");
+        var form_closing = document.querySelector("form");
+        form_closing.style.display = "none";
+
+    }
+    
+
+
 
     var Addpage = [];
     
 
     function address_add(){
     event.preventDefault();
+
+    
 
     var name = document.querySelector("#in1").value ;
     var email = document.querySelector("#in2").value ;

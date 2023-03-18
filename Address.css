@@ -45,6 +45,9 @@ box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 
         color:  rgb(149, 140, 140);
         font-size: large;
 }
+#Add_Address:checked ~ form{
+    right : 0;
+}
 #Add_Address{
     display: flex;
     flex-direction: column;
@@ -61,7 +64,10 @@ box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 
     border-radius: 8px;
     margin-right: 17px;
 }
-
+#Add_Address:hover{
+    background-color: rgb(248, 230, 232);
+    border: 2px dotted rgb(245, 151, 166);
+}
 #Add_Address p{
     font-size: 16px;
     font-weight: 600;
@@ -89,6 +95,9 @@ box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 
     background-color: rgb(255, 255, 255);
   
 }
+#display_Add:hover{
+    background-color:rgb(251, 248, 250)
+}
 #display_bag{
     display: flex;
     flex-direction: column;
@@ -98,7 +107,17 @@ box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 
     
     border-radius: 5px
 }
-
+#display_bag #bag{
+    display: flex;
+    border-radius: 7px;
+    border: 1px solid rgb(178, 173, 173);
+}
+#display_bag #price{
+    display: flex;
+    margin-bottom: 8px;
+    border-radius: 7px;
+    border:1px solid rgb(178, 173, 173);
+}
 #display_bag #authentic{
     background: rgb(249, 250, 250);
     display: flex;
@@ -116,14 +135,21 @@ box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 
 
 /* form Starts */
 form{
-    position: relative;
+    position: absolute;
+    right: 0px;
+    top: -30px;
+    
+    height: 100%;
    display: grid;
    grid-template-columns: repeat(1fr,1);
-    width: 400px;
+    width: 350px;
    margin: auto;
-  
-    padding: 10px;
+   background-color: rgb(255, 255, 255);
+    padding: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+form h2{
+    margin-bottom: 0px;
 }
 form input{
     background: rgb(243, 244, 245);
@@ -137,15 +163,16 @@ form input{
 }
 form #in6{
     padding: 20px 12px 5px;
-    height: 50px;
+    height: 60px;
 }
 form button{
-    padding: 12px;
+    padding: 5px;
     border-style: solid;
+    margin-top: 5px;
     border-width: 1px;
     font-size: 16px;
     font-weight: 600;
-    line-height: 24px;
+    line-height: 20px;
     border-color: rgb(232, 0, 113);
     background-color: rgb(232, 0, 113);
     color: rgb(255, 255, 255);

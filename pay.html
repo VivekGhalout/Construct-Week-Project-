@@ -69,6 +69,15 @@
                                  </div>
                                 
                             </div>
+                            <div id="netbanking">
+                                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/Netbanking.svg"
+                                 alt="" style="width: 20px;">
+                                 <div class="method_name">
+                                    <p class="name_of">NetBanking</p>
+                                    <p>Pay through your favourite Bank</p>
+                                 </div>
+                                
+                            </div>
                     </div>
 
                     <div id="display_Add"> 
@@ -77,7 +86,18 @@
                     </div>
 
                     <div id="display_bag">
-                            
+                        <div id="bag">
+                            <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/Icon.svg"
+                             alt="">
+                             <h3>Bag</h3>
+                             <!-- <span>  will append </span> -->
+                        </div>
+                        <div id="price">
+                            <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/ic_payment_details-03.svg"
+                             alt="">
+                             <h3>Price</h3>
+                             <!-- <span> </span> -->
+                        </div>
                             <div id="authentic">
                                 <p>Buy authentic products. Pay securely. Easy returns and exchange.</p>
                                 <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/BuyerAssurance.svg"
@@ -92,11 +112,12 @@
 
 <script>
 
-    document.querySelector("#credit").addEventListener("click", showcredit);
+document.querySelector("#credit").addEventListener("click", showcredit);
     document.querySelector("#cash").addEventListener("click", showcash);
     
 
     function showcredit(){
+        document.querySelector("#display_Add").textContent = "";
 
        var div = document.createElement("div");     //creating div
        div.setAttribute("id", "credit_D");
@@ -185,6 +206,7 @@
     
 
     function showcash(){
+        document.querySelector("#display_Add").textContent = "";
 
         var h4 =document.createElement("h4");       //creating h4 tag
        h4.setAttribute("id", "cash_h4");
