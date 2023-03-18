@@ -319,10 +319,14 @@ function displayproducts(products) {
         rating.textContent = ele.rating;
 
         var a = document.createElement("a");
-        a.setAttribute("href", "home.html");
+        a.setAttribute("href", "pro_discription.html");
 
         var button = document.createElement("button");
+        button.setAttribute("id", "pro_info");
         button.textContent = "Product Preview";
+        button.addEventListener("click", function (){
+            pro_details(ele);
+        });
 
         a.append(button);
 
@@ -332,4 +336,13 @@ function displayproducts(products) {
     })
 }
 
-var cart = JSON
+var details = JSON.parse(localStorage.getItem("iteam_details2"));
+
+if(details.length === 0) {
+    localStorage.setItem("iteam_details2", JSON.stringify(details));
+}
+
+function pro_details(ele) {
+    
+    localStorage.setItem("iteam_details2", JSON.stringify(ele));
+}
