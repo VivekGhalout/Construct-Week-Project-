@@ -227,3 +227,32 @@ width: 200px;
 margin: 10px;
 }
 
+
+
+@media only screen and (max-width:620px){
+
+    #parent{
+    
+        display: block;
+        flex-direction: column;
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;   
+        margin-top: 20px;
+        margin-bottom: 25px;
+        height: auto;
+        
+    }
+    #boxes{
+        display: inline-block;
+    }
+    nav img + div{
+        display: none;
+    }
+    #Add_Address{
+        margin-bottom: 3%;
+    }
+    #display_Add{
+        margin-bottom: 3%;
+    }
+}

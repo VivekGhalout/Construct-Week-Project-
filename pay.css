@@ -1,4 +1,7 @@
-  /* navbar */
+ 
+ 
+ 
+ /* navbar */
   div > nav{
     display: flex;
     justify-content: space-around;
@@ -26,8 +29,7 @@ margin: 0px;
 }
 
 #parent{
-    /* width:  800px; */
-    /* border: 1px solid red; */
+   
     display: flex;
     flex-direction: column;
     width: 75%;
@@ -164,4 +166,24 @@ margin: 0px;
     line-height: 16px;
     margin: 5px;
     padding:10px;
+}
+
+
+
+@media only screen and (max-width:620px){
+
+    nav img + div{
+        display: none;
+    }
+
+    #payment_methods{
+        display: inline-block;
+    }
+    #method{
+        margin-bottom: 3%;
+    }
+    #display_Add{
+        margin-bottom: 3%;
+        border:1px solid rgb(207, 202, 202);
+    }
 }
