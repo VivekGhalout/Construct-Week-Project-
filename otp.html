@@ -1,86 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enter OTP</title>
-    <link rel="stylesheet" href="./styles/Login.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            /* margin: auto; */
-        }
-        
-
-        form {
-            margin-top: 10%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            border: 1px solid #ffd5e5;
-            width: 30%;
-            margin: auto;
-            margin-top: 10%;
-            height: 400px;
-        }
-
-        form * {
-            margin-bottom: 5%;
-        }
-        .otp{
-            padding: 10px;
-            font-size: 20px;
-        }
-
-        #submit {
-            /* height: 3em; */
-            background-color: #fc2779;
-            /* margin-bottom: 2%; */
-            border-radius: 5px;
-            color: white;
-            padding: 15px 30px;
-            text-align: center;
-            border: 0;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-    </style>
-</head>
-
-<body>
-  <div id="main">
-    <form>
-        <h1>Please Enter Your OTP</h1>
-
-        <input type="text" class="otp" placeholder="Enter OTP" />
-        <input  type="submit" id="submit" />
-    </form>
-</div>
-</body>
-
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verification Page</title>
+    <link rel="stylesheet" href="OTP.css" />
+    <link rel="stylesheet" href="home.html"/>
+  </head>
+  <body>
+    <div class="container"><br>
+      <h2>OTP Verification</h2><br>
+      <form>
+       <div class="form-group">
+      <label for="otp"> Welcome back <b>Nykaa user,</b> <br> Please enter the OTP sent on <br> your phone <br>
+            (Be sure to check your spam folder)</label>
+          <input type="tel" id="otp" name="otp" required disabled />
+        </div>
+        <div class="form-group">
+          <button type="button" id="send-otp">Send OTP</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit-otp" disabled>Submit OTP</button><br><br>
+          <img src="https://th.bing.com/th/id/OIP.FukKltxmyZLI-m8nDYVQ4gHaHa?pid=ImgDet&w=512&h=512&rs=1" alt="">
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
-
-
-<script>
-    document.querySelector("form").addEventListener("submit", submitOTP);
-
-    function submitOTP(event) {
-        event.preventDefault();
-
-        var otp = document.querySelector(".otp").value;
-
-        if (otp == 1234) {
-            alert("Login Successful, redirecting to Home");
-            window.location.href = "home.html"
-
-        } else {
+<script>const otpInput = document.getElementById("otp");
+  const sendOtpButton = document.getElementById("send-otp");
+  const submitOtpButton = document.getElementById("submit-otp");
+  
+  // Function to generate random 6-digit OTP
+  function generateOTP() {
+    const digits = "0123456789";
+    let OTP = "";
+    for (let i = 0; i < 4; i++) {
+      OTP += digits[Math.floor(Math.random() * 10)];
+    }
+    return OTP;
+  }
+  
+  sendOtpButton.addEventListener("click", () => {
+    // Generate and display OTP
+    const OTP = generateOTP();
+    alert(`Your OTP is ${OTP}`);
+    otpInput.value = OTP;
+  
+    // Enable OTP input and submit button
+    otpInput.disabled = false;
+    submitOtpButton.disabled = false;
+  });
+  
+  submitOtpButton.addEventListener("click", (e) => {
+    e.preventDefault();
+  
+    const otp = otpInput.value.trim();
+  
+    // Check if OTP is valid
+    if (/^\d{4}$/.test(otp)) {
+      alert("OTP verified successfully!");
+      window.location.href = "home.html"
+      // Do something else on successful verification
+    } else {
             alert("Wrong OTP!")
     }
-}
-</script>
+  });
+  </script>

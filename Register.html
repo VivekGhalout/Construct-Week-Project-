@@ -5,96 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="import"href="Login.html">
+  <link rel="stylesheet" href="Register.css"/>
+  <link rel="stylesheet" href="/.OTP.html"/>
    
     <title>Document</title>
 </head>
 <style>
-    body {
-        background-color: #F3F3F3;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        font-family: sans-serif;
-
-    }
-
-    .main-div {
-        margin: 64px 302px;
-        background-color: white;
-        height: 560px;
-        width: 300px;
-        border-radius: 3% 3% 0 0;
-        outline: 1px solid #c9c8c8;
-        padding: 0 30px 37px;
-    }
-
-    .header-div {
-        display: flex;
-        border-bottom: 1px solid rgba(0, 19, 37, .16);
-    }
-
-    #close_btn_div {
-        /* position: relative ; */
-        padding-top: 20px;
-    }
-
-    .close-btn {
-        background-color: white;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-    }
-
-    #email {
-        width: 100%;
-        height: 40px;
-        text-align: center;
-        font-size: 15px;
-        border-radius: 3px;
-        border: 1px solid rgb(228, 43, 43);
-        margin: 10px 0 0 0;
-        background-color: #F3F3F3;
-    }
-    #login {
-        width: 300px;
-    }
-
-    p {
-        font-size: 15px;
-    }
-
-    #button-separator > * {
-        margin-top: 160px;
-        width: 100%;
-        height: 50px;
-        background-color: #FC2779;
-        color:white;
-        font: sans-serif;
-        font-weight: 600;
-        letter-spacing: 1.8px;
-        border:none;
-        cursor: pointer;
-    }
-
-    .help-msg {
-        display: block;
-        font-size: 10px;
-        font-weight: 600;
-        right: 5 px;
-        bottom: 0;
-        text-align: right;
-        text-transform: uppercase;
-        
-    }
-    #container-2{
-        margin-top: 15Px;
-        padding-top: 20px;
-        padding-bottom: 40px;
-    }
    
-
 </style>
 
 <body>
@@ -152,14 +69,14 @@
       if(exist.length>0)
       {
         alert("login Succesful");
-        window.location.href="Login.html"
+        window.location.href="otp.html"
         signeduser = email;
         var sw  = true;
         localStorage.setItem("switch",sw);
         localStorage.setItem("signeduser",signeduser);
       }
       else{
-        window.location.href="Login.html"
+        window.location.href="otp.html"
       }
     });  
 </script>
