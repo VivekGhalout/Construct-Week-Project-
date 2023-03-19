@@ -1,0 +1,93 @@
+body {
+    background-color: rgb(255, 240, 253);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: inter, sans-serif;
+}
+
+.main-div {
+    margin: 64px 302px;
+    background-color: white;
+    height: 560px;
+    width: 300px;
+    border-radius: 3% 3% 0 0;
+    outline: 1px solid #c9c8c8;
+    padding: 0 30px 37px;
+}
+
+.header-div {
+    display: flex;
+    border-bottom: 1px solid rgba(0, 19, 37, .16);
+}
+
+#close_btn_div {
+    /* position: relative ; */
+    padding-top: 20px;
+}
+
+.close-btn {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#email {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 3px;
+    border: 1px solid rgb(228, 43, 43);
+    margin: 10px 0 0 0;
+    background-color: #F3F3F3;
+}
+
+#login {
+    width: 300px;
+}
+
+p {
+    font-size: 15px;
+}
+
+.a-separator {
+   width: 100%;
+   height: 50px;
+    padding: 5px;
+    margin-top: 100px;
+}
+.a-separator
+{
+    padding: 10px 90px 10px 90px;
+    background-color: #FC2779;
+    width: auto;
+    text-align: center;
+    align-items: center;
+   height: 50px;
+    color: white;
+    text-decoration: none;
+    font: sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    border:none;
+    cursor: pointer;
+}
+
+.help-msg {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    right: 5 px;
+    bottom: 0;
+    text-align: right;
+    text-transform: uppercase;
+    margin-bottom: 300px;
+    margin-top: -10px;
+}
+#help {
+    margin-top: 20px;
+}
+

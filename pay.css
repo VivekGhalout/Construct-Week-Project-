@@ -1,0 +1,191 @@
+ 
+ 
+ 
+ /* navbar */
+  div > nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+   
+}
+nav div img {
+margin: 15px;
+}
+div > nav > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#navbar_Pay{
+padding: 4px;
+box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+}
+/* navber_pay ends */
+body{
+margin: 0px;
+}
+
+#parent{
+   
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+   
+    margin-top: 20px;
+    margin-bottom: 25px;
+    height: auto;
+}
+#text_content h1{
+    font-size: 38px;
+    margin-bottom: -10px;
+    
+}
+#text_content #Detail{
+        color:  rgb(149, 140, 140);
+        font-size: large;
+}
+
+
+/* payment_methods */
+
+#payment_methods{
+    display: flex;
+    
+}
+#credit:hover{
+    background-color: white;
+}
+#cash:hover{
+    background-color: white;
+}
+#upi:hover{
+    background-color: white;
+}
+#netbanking:hover{
+    background-color: white;
+}
+#method{
+    /* display: flex; */
+    /* flex-direction: column; */
+   
+    justify-content: center;
+    
+    align-items: center;
+    border: 1px dashed rgb(178, 176, 176);
+    width: 326px;
+    height: auto;
+    padding: 10px;
+    background-color: rgb(240, 240, 245);
+    cursor: pointer;
+    border-radius: 8px;
+    margin-right: 17px;
+}
+#method > div{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 19, 37, 0.16);
+    margin: 1px;
+    padding: 10px;
+    /* flex-direction: column; */
+}
+#method div img{
+    width: 30px;
+    margin: 2px;
+}
+.method_name{
+    display: flex;
+    flex-direction: column;
+}
+.name_of{
+    
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(232, 0, 113);
+    margin: 0px;
+
+}
+.name_of + p{
+    color: rgb(149, 133, 133);
+    margin: 0px;
+} 
+#boxes{
+    display: flex;
+    margin-top: 35px;
+}
+#display_Add{
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: center;
+    /* padding: 24px; */
+   
+    
+    width: 326px;
+    height: auto;
+    /* border:1px solid  rgb(198, 194, 194); */
+    border-width: 1px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+  
+}
+#display_bag{
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: auto;
+    margin: 0px 0px 0px 38px;
+    
+    border-radius: 5px
+}
+#display_bag #bag{
+    display: flex;
+    border-radius: 7px;
+    border: 1px solid rgb(178, 173, 173);
+}
+#display_bag #price{
+    display: flex;
+    margin-bottom: 8px;
+    border-radius: 7px;
+    border:1px solid rgb(178, 173, 173);
+}
+#display_bag #authentic{
+    background: rgb(249, 250, 250);
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid  rgb(198, 194, 194);
+
+}
+#authentic p, img{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 5px;
+    padding:10px;
+}
+
+
+
+@media only screen and (max-width:620px){
+
+    nav img + div{
+        display: none;
+    }
+
+    #payment_methods{
+        display: inline-block;
+    }
+    #method{
+        margin-bottom: 3%;
+    }
+    
+    #display_Add{
+        margin-bottom: 3%;
+        border:1px solid rgb(207, 202, 202);
+    }
+}
+

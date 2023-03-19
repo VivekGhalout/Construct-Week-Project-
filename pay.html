@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment page</title>
+   <link rel="stylesheet" href="pay.css">
+</head>
+<body>
+    <div id="navbar_Pay">
+        <nav>
+            <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/nykaa-logo.svg"
+             alt="">
+             <div> 
+                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/tick-icon.svg"
+                alt="">
+                <p>Sign Up</p>
+            </div>
+            <div>
+                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/tick-icon.svg"
+                alt="">
+               <a href="Address.html" style="text-decoration: none; color:black"> <p>Address</p> </a>
+            </div>
+              <div>
+                 <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/edit-icon.svg"
+                alt="">
+                <a href="pay.html" style="text-decoration: none; color:black"> <p>Payment</p> </a>
+            </div>
+              
+        </nav>
+     </div>  
+     <!-- navber_pay Ends-->
+
+     <div id="parent">
+            <div id="text_content">
+                <h1>Choose Payment method</h1>
+                <p id="Detail">Choose Payment method you prefer</p>
+            </div>
+
+                <h2> Payment Method Options</h2>
+
+                <div id="payment_methods">
+                    <div id="method">
+                            <div id="credit">
+                                    <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/card-debit-credit-24_2.svg"
+                                     alt="">
+                                     <div class="method_name">
+                                        <p class="name_of">Credit/Debit Card</p>
+                                        <p>visa, mastrecard, rupee and more</p>
+                                     </div>
+                                    
+                            </div>
+                            <div id="cash">
+                                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/COD.svg"
+                                 alt="">
+                                 <div class="method_name">
+                                    <p class="name_of">Cash on Delivery</p>
+                                    <p>Pay at your door step</p>
+                                 </div>
+                                
+                            </div>
+                            <div id="upi">
+                                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/COD.svg"
+                                 alt="">
+                                 <div class="method_name">
+                                    <p class="name_of">UPI</p>
+                                    <p>GPAY, PhonePay, Paytm, and more</p>
+                                 </div>
+                                
+                            </div>
+                            <div id="netbanking">
+                                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/Netbanking.svg"
+                                 alt="" style="width: 20px;">
+                                 <div class="method_name">
+                                    <p class="name_of">NetBanking</p>
+                                    <p>Pay through your favourite Bank</p>
+                                 </div>
+                                
+                            </div>
+                    </div>
+
+                    <div id="display_Add"> 
+                            <!-- <p style="color: rgb(232, 0, 113);">Your contact data </p> -->
+                            
+                    </div>
+
+                    <div id="display_bag">
+                        <div id="bag">
+                            <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/Icon.svg"
+                             alt="">
+                             <h3>Bag</h3>
+                              <span id="Items" style="margin-left: 100px; margin-top: 20px; font-weight: 600;">Items :- </span>
+                        </div>
+                        <div id="price">
+                            <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/ic_payment_details-03.svg"
+                             alt="">
+                             <h3>Price</h3>
+                             <span id="Grand_total" style="margin-left: 100px; margin-top: 20px; font-weight: 600;"> ₹ </span>
+                        </div>
+                            <div id="authentic">
+                                <p>Buy authentic products. Pay securely. Easy returns and exchange.</p>
+                                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/BuyerAssurance.svg"
+                                 alt="">
+                            </div>
+                    </div>
+        </div> <!-- //boxes -->
+
+        <!-- parent div -->
+    </div>
+</body>
+
+<script>
+
+document.querySelector("#credit").addEventListener("click", showcredit);
+    document.querySelector("#cash").addEventListener("click", showcash);
+    
+
+    function showcredit(){
+        document.querySelector("#display_Add").textContent = "";
+
+       var div = document.createElement("div");     //creating div
+       div.setAttribute("id", "credit_D");
+       div.style.border = "1px solid rgba(0, 19, 37, 0.16)";
+       div.style.height = "220px";
+       div.style.padding = "10px";
+
+
+       var h4 =document.createElement("h4");        //creating h4 tag
+       h4.setAttribute("id", "credit_h4");
+       h4.textContent = "One card for all Nykaa Apps";
+       h4.style.fontSize = "20px";
+       h4.style.marginTop = "0px";
+
+       var card_Number = document.createElement("input");        //creating input for card number tag
+       card_Number.setAttribute("id", "credit_card_number");
+       card_Number.setAttribute("placeholder", "Card Number");
+       card_Number.style.backgroundColor = "rgb(243, 244, 245)";
+       card_Number.style.border = "rgb(243, 244, 245)";
+       card_Number.style.padding = "14px";
+       card_Number.style.margin = "5px";
+       
+      
+
+       var div2 = document.createElement("div");
+       div2.setAttribute("id", "credit_ex_&_cvv");
+       div2.style.marginBottom = "28px"
+
+
+       var card_ex = document.createElement("input");        //creating input for card Expiry tag
+       card_ex.setAttribute("id", "credit_card_ex");
+       card_ex.setAttribute("placeholder", "Expiry(MM/YY)");
+       card_ex.style.backgroundColor = "rgb(243, 244, 245)";
+       card_ex.style.border = "rgb(243, 244, 245)";
+       card_ex.style.padding = "14px";
+       card_ex.style.margin = "5px";
+      
+
+       var card_cvv = document.createElement("input");       //creating input for card cvv tag
+       card_cvv.setAttribute("id", "credit_card_cvv");
+       card_cvv.setAttribute("placeholder", "CVV");
+       card_cvv.style.backgroundColor = "rgb(243, 244, 245)";
+       card_cvv.style.border = "rgb(243, 244, 245)";
+       card_cvv.style.width = "50px";
+       card_cvv.style.padding = "14px";
+       card_cvv.style.margin = "5px";
+      
+       
+
+       var card_button = document.createElement("a");            //creating button with anchor  tag
+       card_button.setAttribute("id", "credit_card_button");
+       card_button.textContent ="Pay & Place Order";
+       card_button.setAttribute("href", "success.html");    
+       card_button.style.backgroundColor = "rgb(232, 0, 113)";
+       card_button.style.border = "rgb(232, 0, 113)";
+       card_button.style.textDecoration = "none";
+       card_button.style.padding = "10px";   
+       card_button.style.color = "white";
+       card_button.style.textAlign = "center";
+       card_button.style.borderRadius = "5px"
+
+      
+       
+       div2.append(card_ex,card_cvv);       
+        div.append(h4,card_Number,div2,card_button);
+       document.querySelector("#display_Add").append(div);      // appending
+
+    //    document.querySelector("#credit_card_button").addEventListener("click", "check_valid");
+
+      
+    }
+
+    //      credit card details validation
+
+    // function check_valid(){
+    //     var credit_card_number = document.querySelector("#credit_card_number").value ;
+    //     var credit_card_ex = document.querySelector("#credit_card_ex").value ;
+    //     var credit_card_cvv = document.querySelector("#credit_card_cvv").value ;
+
+    //    if(credit_card_cvv==="" || credit_card_ex===""|| credit_card_number==="")
+    //     {
+    //         alert("Fill out all Details");
+    //     }
+
+    // }
+    
+    
+
+    function showcash(){
+        document.querySelector("#display_Add").textContent = "";
+
+        var h4 =document.createElement("h4");       //creating h4 tag
+       h4.setAttribute("id", "cash_h4");
+       h4.textContent = "Pay At Your Door Step";
+       h4.style.fontSize = "20px";
+       h4.style.marginTop = "0px";
+
+
+        var cash_button = document.createElement("a");       //creating button with anchor  tag
+        cash_button.setAttribute("id", "credit_card_button");
+        cash_button.textContent =" Place Your Order";
+        cash_button.setAttribute("href", "success.html");        
+        cash_button.style.backgroundColor = "rgb(232, 0, 113)";
+        cash_button.style.border = "rgb(232, 0, 113)";
+        cash_button.style.textDecoration = "none";
+        cash_button.style.padding = "10px";      
+        cash_button.style.color = "white";
+        cash_button.style.textAlign = "center";
+        cash_button.style.borderRadius = "5px"
+        
+        document.querySelector("#display_Add").append(h4, cash_button);
+    }
+
+
+
+    var dataFromCart = JSON.parse(localStorage.getItem("cartProducts")) || [];
+
+// span will append number of products       
+ var NumberofItems = dataFromCart.size();
+ document.querySelector("#Items").append(NumberofItems);
+
+
+//  span grand total
+var GT = localStorage.getItem("cartvalue");
+document.querySelector("#Grand_total").append(GT);
+
+
+</script>
+</html>
