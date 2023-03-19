@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Login.css"/>
-    <link rel="stylesheet" href="./Register.html"/>
-
-    <title>Document</title>
+    <link rel="stylesheet" href="./Login.css" />
+    <link rel="stylesheet" href="Register.html">
+    <link rel="icon" href="//images-static.nykaa.com/media/favicon/default/nykaa_favicon_a.png" type="image/x-icon">
+    <title>Buy Cosmetics Products &amp; Beauty Products Online in India at Best Price | Nykaa</title>
 </head>
 <style>
-    
+
 </style>
 
 <body>
@@ -37,42 +37,15 @@
                 </svg>
                 <span class="help-msg">Required</span>
             </div>
-            <div class="button-separator">
-                <button> PROCEED </button>
+            <div style="margin-top: -60px;">
+                <a class="a-separator" href="Register.html"> PROCEED</a>
             </div>
-            <p>Don't have an account? <a href="Register.html">Sign up here.</a></p>
+            <p id="help">Don't have an account? <a href="Register.html">Sign up here.</a></p>
         </form>
     </div>
 </body>
 
 </html>
 <script>
-    document.querySelector("form").addEventListener("submit", function () {
-        event.preventDefault();
-        var email = document.getElementById("email").value;
-        console.log(email);
-
-        var arr = JSON.parse(localStorage.getItem("users"));
-        var exist = arr.filter(function (elem) {
-            return (email == elem.email);
-        });
-        console.log(exist);
-
-        var signeduser = localStorage.getItem("signeduser") || "Signin";
-        var sw = localStorage.getItem("switch") || false;
-
-        if (exist.length > 0) {
-            alert("login Succesful Your");
-            window.location.href = "Register.html"
-            signeduser = email;
-            var sw = true;
-            localStorage.setItem("switch", sw);
-            localStorage.setItem("signeduser", signeduser);
-        }
-        else {
-            window.location.href = "Register.html"
-        }
-
-    })
 
 </script>
