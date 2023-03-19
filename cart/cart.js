@@ -1,5 +1,5 @@
 document.querySelector("button").addEventListener("click", check);
-var cart=JSON.parse(localStorage.getItem("cartProducts")) || [];
+var cart = JSON.parse(localStorage.getItem("cartProducts")) || [];
 
 function getPrdouctCard(productName, productQty, productPrice, discountPrice, productImage, index) {
   return `
@@ -28,6 +28,8 @@ function getPrdouctCard(productName, productQty, productPrice, discountPrice, pr
                 <option ${productQty === 3 ? "selected" : ""} value="3">3</option>
                 <option ${productQty === 4 ? "selected" : ""} value="4">4</option>
                 <option ${productQty === 5 ? "selected" : ""} value="5">5</option>
+                
+
               </select>
             </span>
           </div>
@@ -64,18 +66,19 @@ function updateQty(event, position) {
   caltotal(cart);
   displayCartItemsCount(cart);
 }
-
+var itemscount=localStorage.getItem("countitem")
 function displayCartItemsCount(cart) {
   var cartItemsCount = cart && cart.length;
   var cartCountValue = "";
   if (cartItemsCount === 1) {
     cartCountValue = " 1 item";
-   
+
   } else if (cartItemsCount > 1) {
     cartCountValue = " " + cartItemsCount + " items";
-   
+
   }
   document.getElementById("per").innerHTML = cartCountValue;
+  localStorage.setItem("countitem",cartCountValue)
 }
 function displayCart(cart) {
   document.querySelector("#bagItems").innerHTML = "";
@@ -103,24 +106,28 @@ function delrow(index) {
     document.getElementById("Offer").style.display = "none";
   }
 }
+var pert=localStorage.getItem("cartvalue");
 function caltotal() {
   var cart = JSON.parse(localStorage.getItem("cartProducts")) || [];
   var carval = 0;
   for (var i = 0; i < cart.length; i++) {
     console.log("@AJ", cart[i].productQty);
     carval += parseInt(cart[i].price) * (cart[i] && cart[i].productQty || 1);
+  
   }
   document.getElementById("grandTotalPrice").textContent = carval;
+  localStorage.setItem("cartvalue",carval);
+
 }
 
 
 function check() {
   var ch = document.getElementById("promo").value;
-  if (ch == "makeup0" || ch == "kratika98" || ch == "makeup30"||ch=="krati98") {
+  if (ch == "makeup0" || ch == "kratika98" || ch == "makeup30" || ch == "krati98") {
     var temp = document.createElement("p");
     temp.setAttribute("class", "krp");
     alert(temp = " 30% off applied");
-    // document.getElementById("Offer").append(temp);
+    //  document.getElementById("Offer").append(temp);
     var t = parseInt(document.getElementById("grandTotalPrice").textContent);
     var change = (t * 3) / 10;
     document.getElementById("grandTotalPrice").textContent = t - change;
@@ -140,7 +147,7 @@ function showNykkaCart() {
     document.getElementById("grandTotalParent").style.display = "none";
     document.getElementById("child").style.display = "block";
     if (offerElement)
-       document.getElementById("Offer").style.display = "none";
+      document.getElementById("Offer").style.display = "none";
   }
   var cartelements = document.getElementsByClassName("nykkacart");
   for (let i = 0; i < cartelements.length; i++) {
