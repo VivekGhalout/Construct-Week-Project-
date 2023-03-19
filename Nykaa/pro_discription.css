@@ -1063,10 +1063,6 @@ i {
     width: 21%;
 }
 
-#left_2 {
-    /* border: 3px solid orangered; */
-}
-
 .crousel_imgs {
     display: flex;
     justify-content: space-between;
