@@ -4,8 +4,7 @@
 }
 
 .parent {
-    font-size: 14px;
-    
+    font-size: 16px;
 }
 
 #per {
@@ -171,25 +170,18 @@
     text-align: center;
 }
 
-/* #Offer>div>div{
-    display: flex;
-
-} */
-
 #Offer>div>button {
-
     background-color: rgb(234, 24, 70);
     color: rgb(252, 251, 251);
-
     font-family: sans-serif;
     padding: 10px;
-    margin-top: 10px;
-    border: none;
+    border: 1px solid rgb(234, 24, 70);
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 
 #button {
-
     display: block;
     margin: auto;
     color: whitesmoke;
@@ -250,7 +242,7 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(0 0 0 / 50%);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 99;
     top: 0;
     left: 0;
@@ -263,7 +255,13 @@
     height: 100vh;
     z-index: 100;
     width: 400px;
+    border: 2px solid rgb(183 183 183);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 30px 6px;
+}
+.nykaacartinnerdiv {
+    display: none;
     background-color: white;
+    height: 100vh;
 }
 .emptycartimage {
     width: 200px;

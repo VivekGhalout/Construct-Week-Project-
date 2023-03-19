@@ -1146,3 +1146,36 @@ i {
 #right_card >a > button:hover{
     background-color:#fd0262;
 }
+
+#pro_dis_bottom {
+    /* border: 5px solid black; */
+    width: 78%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#pro_dis_bottom > div {
+    width: 23%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    
+}
+#pro_dis_bottom > div > a > div >img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+#pro_dis_bottom > div > div >p:first-child {
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+#pro_dis_bottom > div > div >p:nth-child(2) {
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #797878;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
