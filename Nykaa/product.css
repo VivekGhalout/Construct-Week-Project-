@@ -477,3 +477,54 @@ i {
     line-height: 1.25rem;
     padding: 0 0 0.2rem 0;
 }
+
+.dropbtn {
+    background-color: white;
+    color: black;
+    /* font-weight: 600; */
+    font-size: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.dropbtn > div > img {
+   width: 25px;
+}
+
+.dropbtn > div {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+.dropbtn > div > p {
+    padding: 0;
+    margin-bottom: -10px;
+}
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: white;
+    outline: none;
+}
+
+#myDropdown> p > img {
+    width: 20px;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+#myDropdown>  p {
+    margin-top: 22px;
+    border-bottom: 1px solid rgb(232, 229, 229);
+    padding-bottom: 5px;
+    padding-right: -50px;
+}
+
+#myDropdown > p:nth-child(5) {
+    margin-bottom: -20px;
+}
+
+.dropdown a:hover {
+    background-color: #f1f1f1
+}
