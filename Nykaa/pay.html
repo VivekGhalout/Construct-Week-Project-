@@ -7,7 +7,7 @@
     <title>Payment page</title>
    <link rel="stylesheet" href="pay.css">
 </head>
-<body>
+<body style="font-family: inter, sans-serif;">
     <div id="navbar_Pay">
         <nav>
             <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/nykaa-logo.svg"
@@ -235,14 +235,13 @@ document.querySelector("#credit").addEventListener("click", showcredit);
 
     var dataFromCart = JSON.parse(localStorage.getItem("cartProducts")) || [];
 
-// span will append number of products       
- var NumberofItems = dataFromCart.size();
- document.querySelector("#Items").append(NumberofItems);
+    var NumberofItems = localStorage.getItem("countitem")
+ document.querySelector("#Items").innerHTML = NumberofItems;
 
 
 //  span grand total
 var GT = localStorage.getItem("cartvalue");
-document.querySelector("#Grand_total").append(GT);
+document.querySelector("#Grand_total").innerHTML = "₹ " + GT;
 
 
 </script>
