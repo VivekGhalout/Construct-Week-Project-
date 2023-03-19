@@ -90,13 +90,13 @@
                             <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/Icon.svg"
                              alt="">
                              <h3>Bag</h3>
-                              <!-- <span style="margin-left: 100px; margin-top: 20px; font-weight: 600;">  3 Items </span> -->
+                              <span id="Items" style="margin-left: 100px; margin-top: 20px; font-weight: 600;">Items :- </span>
                         </div>
                         <div id="price">
                             <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/ic_payment_details-03.svg"
                              alt="">
                              <h3>Price</h3>
-                             <!-- <span style="margin-left: 100px; margin-top: 20px; font-weight: 600;">  34256 </span> -->
+                             <span id="Grand_total" style="margin-left: 100px; margin-top: 20px; font-weight: 600;"> ₹ </span>
                         </div>
                             <div id="authentic">
                                 <p>Buy authentic products. Pay securely. Easy returns and exchange.</p>
@@ -230,6 +230,20 @@ document.querySelector("#credit").addEventListener("click", showcredit);
         
         document.querySelector("#display_Add").append(h4, cash_button);
     }
+
+
+
+    var dataFromCart = JSON.parse(localStorage.getItem("cartProducts")) || [];
+
+// span will append number of products       
+ var NumberofItems = dataFromCart.size();
+ document.querySelector("#Items").append(NumberofItems);
+
+
+//  span grand total
+var GT = localStorage.getItem("cartvalue");
+document.querySelector("#Grand_total").append(GT);
+
 
 </script>
 </html>
