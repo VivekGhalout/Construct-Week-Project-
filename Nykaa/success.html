@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping-completed</title>
+<style>body {
+    text-align: center;
+    font-family: roboto, sans-serif;
+}
+
+img {
+    width: 200px;
+}
+
+button {
+    background-color: #fc2779;
+    border:1px solid #fc2779;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 6px;
+}</style>
+</head>
+<body>
+    <img src="https://us.v-cdn.net/6033805/uploads/NFFSMTHMR4G8/quaintlikelyflyingfish-max-1mb.gif" alt="">
+    <h2>Thank you for your purchase!</h2>
+    <p>Your order id: <span id='order'></span></p>
+   <button type="submit"onclick="btn()">Continue Shopping</button>
+</body>
+<script>
+document.getElementById("order").innerHTML = Math.round(Math.random() * 3311000);
+
+// function btn() {
+//     location.replace("index.html")
+// }
+    </script>
+</html>

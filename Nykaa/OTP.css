@@ -1,0 +1,96 @@
+   /* Reset default styles */
+   * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+
+   /* Set a background color */
+   body {
+     background-color: rgb(255, 240, 253);
+     display: flex;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+     font-family: inter, sans-serif;
+   }
+
+   /* Style the container */
+   .container {
+     margin: 94px 302px;
+     background-color: white;
+     height: 560px;
+     width: 380px;
+     border-radius: 3% 3% 0% 0%;
+     outline: 1px solid #c9c8c8;
+     padding: 0 30px 37px;
+
+   }
+
+   /* Style the heading */
+   h2 {
+     margin-bottom: 40px;
+     text-align: center;
+     font-size: 2.5rem;
+   }
+
+   /* Style the form */
+   form {
+     display: flex;
+     flex-direction: column;
+   }
+
+   /* Style the form group */
+   .form-group {
+     margin-bottom: 20px;
+   }
+
+   /* Style the label */
+   label {
+     display: block;
+     margin-bottom: 10px;
+     font-size: 1.2rem;
+   }
+
+   /* Style the input */
+   input[type="tel"] {
+     padding: 10px;
+     font-size: 1.2rem;
+     border-radius: 5px;
+     border: none;
+     border: 1px solid #ddd;
+     background-color: #f9f9f9;
+     outline: none;
+   }
+
+   /* Disable input when not needed */
+   input[disabled] {
+     background-color: #eee;
+   }
+
+   /* Style the button */
+   button {
+     padding: 10px;
+     font-size: 1.2rem;
+     color: #fff;
+     background-color: #fc2779;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.2s ease-in-out;
+   }
+
+   /* Hover effect */
+   button:hover {
+     background-color: #fc2779;
+   }
+
+   /* Disable button when not needed */
+   button[disabled] {
+     opacity: 0.5;
+     cursor: not-allowed;
+   }
+
+   img {
+     height: 80px;
+   }
