@@ -247,18 +247,18 @@ input:focus {
     display: inline-block;
 }
 
-#cartbtn> a >button>img {
+#cartbtn>button>img {
     width: 25px;
     height: 25px;
     margin-bottom: -5px;
 }
 
-#cartbtn > a>button {
+#cartbtn >button {
     border: none;
     background-color: white;
     cursor: pointer;
 }
-#cartbtn > a>button:focus {
+#cartbtn >button:focus {
     outline: none;
 }
 
