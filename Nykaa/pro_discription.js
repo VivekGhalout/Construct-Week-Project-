@@ -70,11 +70,11 @@ function display_pro(ele) {
         mrp_div.setAttribute("id", "mrp_div");
 
         var mrp = document.createElement("p");
-        mrp.textContent = "MRP:";
+        mrp.textContent = "MRP: ";
 
         var str_price = document.createElement("span");
         str_price.setAttribute("id", "str_price");
-        str_price.textContent = ele.strikeoffprice;
+        str_price.textContent = "₹"+ele.strikeoffprice;
 
         var act_price = document.createElement("span");
         act_price.setAttribute("id", "act_price");
@@ -119,7 +119,7 @@ function display_pro(ele) {
         add_cart.setAttribute("id", "add_cart");
         add_cart.textContent = "Add to Bag";
         add_cart.addEventListener("click", function () {
-            addToCartFun(index);
+            addToCart(ele);
         });
 
         cart_btn.append(add_cart);
@@ -200,7 +200,15 @@ function display_pro(ele) {
     // });
 }
 
-display_pro(disc_product);
+// display_pro(disc_product);
+
+var cartArr = JSON.parse(localStorage.getItem("cartProducts")) || [];
+
+function addToCart(elem) {
+    cartArr.push(elem);
+    console.log(elem);
+    localStorage.setItem("cartProducts", JSON.stringify(cartArr));
+}
 
 async function pincodeFunc() {
     let pincode = document.getElementById('pincode').value;

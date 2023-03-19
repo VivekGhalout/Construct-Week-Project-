@@ -80,7 +80,7 @@ function displayCartItemsCount(cart) {
 function displayCart(cart) {
   document.querySelector("#bagItems").innerHTML = "";
   cart.map(function (elem, index) {
-    var card = getPrdouctCard(elem.name, 1, elem.strikedoffprice, elem.price, elem.image_url, index);
+    var card = getPrdouctCard(elem.pro_name, 1, elem.strikeoffprice, elem.price, elem.image_url, index);
     var div = document.createElement("div");
     div.innerHTML = card;
     document.querySelector("#bagItems").append(div);
