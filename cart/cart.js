@@ -19,7 +19,7 @@ function getPrdouctCard(productName, productQty, productPrice, discountPrice, pr
           </div>
         </div>
         <div style="padding: 0px 5px;">
-          <hr>
+          <hr style="border: none; border-bottom: 1px solid rgb(112 112 112 / 19%);">
         <div style="display: flex; justify-content: space-between;padding: 10px;">
           <div style="color: rgb(0, 19, 37); font-size: 16px;">
             Quantity : <span class="productQty"><select onchange="updateQty(event, ${index})" style="border: none;outline: none;font-size: 18px;">
@@ -28,8 +28,6 @@ function getPrdouctCard(productName, productQty, productPrice, discountPrice, pr
                 <option ${productQty === 3 ? "selected" : ""} value="3">3</option>
                 <option ${productQty === 4 ? "selected" : ""} value="4">4</option>
                 <option ${productQty === 5 ? "selected" : ""} value="5">5</option>
-                
-
               </select>
             </span>
           </div>
@@ -47,7 +45,7 @@ const couponHTML = `
         <div id="trp">
           <p> Coupons <i class="fa fa-info-circle"></i></p>
         </div>
-        <input type="text" id="promo">
+        <input placeholder="Enter Coupon Code" type="text" id="promo">
         <button onclick="check()">Apply</button>
       </div> <br>
     </div>
@@ -66,7 +64,7 @@ function updateQty(event, position) {
   caltotal(cart);
   displayCartItemsCount(cart);
 }
-var itemscount=localStorage.getItem("countitem")
+var itemscount = localStorage.getItem("countitem")
 function displayCartItemsCount(cart) {
   var cartItemsCount = cart && cart.length;
   var cartCountValue = "";
@@ -78,19 +76,21 @@ function displayCartItemsCount(cart) {
 
   }
   document.getElementById("per").innerHTML = cartCountValue;
-  localStorage.setItem("countitem",cartCountValue)
+  localStorage.setItem("countitem", cartCountValue)
 }
 function displayCart(cart) {
   document.querySelector("#bagItems").innerHTML = "";
   cart.map(function (elem, index) {
-    var card = getPrdouctCard(elem.name, 1, elem.strikedoffprice, elem.price, elem.image_url, index);
+    var card = getPrdouctCard(elem.name, elem.productQty || 1, elem.MRP, elem.price, elem.image_url, index);
     var div = document.createElement("div");
     div.innerHTML = card;
     document.querySelector("#bagItems").append(div);
   });
-  var couponDiv = document.createElement("div")
-  couponDiv.innerHTML = couponHTML;
-  document.querySelector("#bagItems").append(couponDiv);
+  if (cart && cart.length) {
+    var couponDiv = document.createElement("div")
+    couponDiv.innerHTML = couponHTML;
+    document.querySelector("#bagItems").append(couponDiv);
+  }
 }
 
 function delrow(index) {
@@ -103,34 +103,39 @@ function delrow(index) {
   if (cart.length === 0) {
     document.getElementById("grandTotalParent").style.display = "none";
     document.getElementById("child").style.display = "block";
-    document.getElementById("Offer").style.display = "none";
+    var offerElement = document.getElementById("Offer");
+    if (offerElement)
+      offerElement.style.display = "none";
   }
 }
-var pert=localStorage.getItem("cartvalue");
+var pert = localStorage.getItem("cartvalue");
 function caltotal() {
   var cart = JSON.parse(localStorage.getItem("cartProducts")) || [];
   var carval = 0;
   for (var i = 0; i < cart.length; i++) {
-    console.log("@AJ", cart[i].productQty);
     carval += parseInt(cart[i].price) * (cart[i] && cart[i].productQty || 1);
-  
+
   }
   document.getElementById("grandTotalPrice").textContent = carval;
-  localStorage.setItem("cartvalue",carval);
+  localStorage.setItem("cartvalue", carval);
 
 }
 
 
 function check() {
+  var cart = JSON.parse(localStorage.getItem("cartProducts")) || [];
+  var total = 0;
+  cart.forEach((item) => {
+    total = total + Number(item.price);
+  });
   var ch = document.getElementById("promo").value;
   if (ch == "makeup0" || ch == "kratika98" || ch == "makeup30" || ch == "krati98") {
     var temp = document.createElement("p");
     temp.setAttribute("class", "krp");
     alert(temp = " 30% off applied");
     //  document.getElementById("Offer").append(temp);
-    var t = parseInt(document.getElementById("grandTotalPrice").textContent);
-    var change = (t * 3) / 10;
-    document.getElementById("grandTotalPrice").textContent = t - change;
+    var change = (total * 3) / 10;
+    document.getElementById("grandTotalPrice").textContent = total - change;
   }
 }
 
@@ -154,12 +159,17 @@ function showNykkaCart() {
     var element = cartelements[i];
     if (element.style.display === "block") {
       element.style.display = "none";
+      document.querySelector(".nykaacartinnerdiv").style.display = "none";
     } else {
       displayCartItemsCount(cart);
       caltotal(cart)
       displayCart(cart);
       element.style.display = "block";
+      if (element.id === "nykaacartdiv") {
+        setTimeout(() => {
+          document.querySelector(".nykaacartinnerdiv").style.display = "block";
+        }, 1000);
+      }
     }
   };
 }
-showNykkaCart();

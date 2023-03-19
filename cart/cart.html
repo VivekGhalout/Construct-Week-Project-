@@ -15,7 +15,8 @@
 <body style="font-family: inter, sans-serif">
   <button onclick="showNykkaCart()">Cart</button>
   <div class="nykkacart nykaaoverlay"></div>
-  <div class="nykkacart nykaacartdiv">
+  <div class="nykkacart nykaacartdiv" id="nykaacartdiv">
+    <div class="nykaacartinnerdiv">
     <div class="parent">
       <div style="display: flex; justify-content: space-between;">
         <div style="display: flex;">
@@ -52,7 +53,7 @@
           <div style="color: rgb(0, 19, 37); font-size: 12px;">Grand Total <i class="fa fa-info-circle"></i></div>
         </div>
         <div>
-         <a href="Address.html"> <button style="cursor: pointer; padding: 5px 10px; border-radius: 10px; border: 1px solid rgb(232, 0, 113); background-color: rgb(232, 0, 113); color: white; font-size: 16px; font-weight: bold; display: flex;
+         <a href="Address.html" style="text-decoration: none; color: white;"> <button style="cursor: pointer; padding: 5px 10px; border-radius: 10px; border: 1px solid rgb(234, 24, 70); background-color: rgb(234, 24, 70); font-size: 16px; font-weight: bold; display: flex;
     align-items: center">Proceed <div style="padding: 0 0 0 50px;display: inline-block;"></a><svg 
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path
@@ -62,6 +63,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
   <script src="cart.js"></script>
 </body>
