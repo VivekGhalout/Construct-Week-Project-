@@ -11,13 +11,16 @@
     <link rel="icon" href="//images-static.nykaa.com/media/favicon/default/nykaa_favicon_a.png" type="image/x-icon">
     <title>Buy Cosmetics Products &amp; Beauty Products Online in India at Best Price | Nykaa</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="product.css">
-    
+    <link rel="stylesheet" href="cart.css">
+    <!-- <link rel="stylesheet" href="home.css"> -->
+
+
 
 </head>
 
-<body style="background-color: whitesmoke;">
+<body style="background-color: whitesmoke; font-family: inter, sans-serif;">
 
     <header style="position: sticky; top: 0; z-index: 1;">
         <div id="parent">
@@ -384,8 +387,67 @@
                             </div>
                         </div>
                         <div id="cartbtn">
-                            <button><img src="https://cdn-icons-png.flaticon.com/128/6421/6421855.png"
-                                    alt="baglogo"></button>
+                            <button style="border: none;background-color: white;cursor: pointer;" onclick="showNykkaCart()"><img
+                                    src="https://cdn-icons-png.flaticon.com/128/6421/6421855.png"
+                                    alt="baglogo" style="width: 25px;height: 25px;margin-bottom: -5px;"></button>
+                            <div class="nykkacart nykaaoverlay"></div>
+                            <div class="nykkacart nykaacartdiv">
+                                <div class="parent">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <div style="display: flex;">
+                                            <div onclick=" showNykkaCart()"> <img src="arrow-img.png" alt=""
+                                                    style="width: 35px; cursor: pointer;"></div>
+                                            <h2>Bag<span id="per"></span></h2>
+                                        </div>
+                                        <div>
+                                            <div style="padding: 18px 10px;">
+                                                <a href="#"
+                                                    style="color: rgb(255, 49, 83); font-size: 14px; text-decoration: none; font-weight: bold;">View
+                                                    Wishlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div id="child">
+                                    <img class="emptycartimage" src="empty-cart-img.PNG" alt="Cart image" />
+                                    <div style="color: black; font-weight: bold; font-size: 22px; padding: 0 50px;">Your
+                                        Shopping Bag is Empty</div>
+                                    <div
+                                        style="color: black; font-weight: normal; font-size: 16px; padding: 15px 50px;">
+                                        This feels too light! Go on,
+                                        add all your favourites</div>
+                                    <div>
+                                        <button onclick="showNykkaCart()"
+                                            style="cursor: pointer; padding: 15px 60px; border-radius: 10px; border: 1px solid rgb(232, 0, 113); background-color: rgb(232, 0, 113); color: white; font-size: 16px; font-weight: bold;">Start
+                                            Shopping</button>
+                                    </div>
+                                </div>
+                                <div id="bagItems"></div>
+
+                                <div id="grandTotalParent">
+                                    <hr>
+                                    <div id="gandTotal">
+                                        <div>
+                                            <div style="color: black; font-weight: bold; font-size: 20px;">₹<span
+                                                    id="grandTotalPrice">0</span> </div>
+                                            <div style="color: rgb(0, 19, 37); font-size: 12px;">Grand Total <i
+                                                    class="fa fa-info-circle"></i></div>
+                                        </div>
+                                        <div>
+                                            <button style="cursor: pointer; padding: 5px 10px; border-radius: 10px; border: 1px solid rgb(232, 0, 113); background-color: rgb(232, 0, 113); color: white; font-size: 16px; font-weight: bold; display: flex;
+                                             align-items: center">Proceed <div
+                                                    style="padding: 0 0 0 50px;display: inline-block;"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            d="M14.6865 4.2865C14.5029 4.10306 14.2538 4 13.9941 4C13.7345 4 13.4854 4.10306 13.3018 4.2865C13.1182 4.46994 13.015 4.71874 13.015 4.97816C13.015 5.23759 13.1182 5.48639 13.3018 5.66983L18.6748 11.0278H2.97513C2.71651 11.0278 2.46848 11.1304 2.28561 11.3131C2.10274 11.4958 2 11.7436 2 12.002C2 12.2604 2.10274 12.5081 2.28561 12.6908C2.46848 12.8735 2.71651 12.9762 2.97513 12.9762H18.6748L13.3018 18.3341C13.2104 18.4247 13.1379 18.5324 13.0883 18.6512C13.0388 18.7699 13.0134 18.8972 13.0134 19.0258C13.0134 19.1544 13.0388 19.2817 13.0883 19.4005C13.1379 19.5192 13.2104 19.6269 13.3018 19.7175C13.3929 19.8078 13.501 19.8792 13.6198 19.9277C13.7386 19.9762 13.8658 20.0007 13.9941 20C14.1225 20.0007 14.2497 19.9762 14.3685 19.9277C14.4873 19.8792 14.5954 19.8078 14.6865 19.7175L21.7172 12.6937C21.8076 12.6026 21.8791 12.4947 21.9276 12.376C21.9761 12.2573 22.0007 12.1302 22 12.002C21.9964 11.7441 21.8954 11.497 21.7172 11.3103L14.6865 4.2865Z"
+                                                            fill="white"></path>
+                                                    </svg></div></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -489,7 +551,7 @@
                         <option value="New Arrivals">New Arrivals</option>
                     </select>
                 </div>
-                
+
                 <div id="cat_list">
                     <select id="cat_child">
                         <option value="">Category</option>
@@ -520,7 +582,7 @@
                     </select>
                     <select id="cat_child">
                         <option value="">Skin Tone</option>
-                    </select>   
+                    </select>
                 </div>
 
             </div>
@@ -543,15 +605,16 @@
                         <button type="submit">Send</button>
                     </form>
                 </div>
-    
+
                 <div id="foo_experience">
                     <div id="icon_wrapper">
                         <i class="fas fa-mobile-android-alt"></i>
                         <p>EXPERIENCE THE NYKAA MOBILE APP</p>
                     </div>
-    
+
                     <div id="svg_wrapper">
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="122" height="36" viewBox="0 0 135 40">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="122" height="36"
+                                viewBox="0 0 135 40">
                                 <title>Google Play Store</title>
                                 <path
                                     d="M130 40H5c-2.8 0-5-2.2-5-5V5c0-2.8 2.2-5 5-5h125c2.8 0 5 2.2 5 5v30c0 2.8-2.2 5-5 5z">
@@ -565,8 +628,8 @@
                                 <path
                                     d="M68.1 21.8c-2.4 0-4.3 1.8-4.3 4.3 0 2.4 1.9 4.3 4.3 4.3s4.3-1.8 4.3-4.3c0-2.6-1.9-4.3-4.3-4.3zm0 6.8c-1.3 0-2.4-1.1-2.4-2.6s1.1-2.6 2.4-2.6 2.4 1 2.4 2.6c0 1.5-1.1 2.6-2.4 2.6zm-9.3-6.8c-2.4 0-4.3 1.8-4.3 4.3 0 2.4 1.9 4.3 4.3 4.3s4.3-1.8 4.3-4.3c0-2.6-1.9-4.3-4.3-4.3zm0 6.8c-1.3 0-2.4-1.1-2.4-2.6s1.1-2.6 2.4-2.6c1.3 0 2.4 1 2.4 2.6 0 1.5-1.1 2.6-2.4 2.6zm-11.1-5.5v1.8H52c-.1 1-.5 1.8-1 2.3-.6.6-1.6 1.3-3.3 1.3-2.7 0-4.7-2.1-4.7-4.8s2.1-4.8 4.7-4.8c1.4 0 2.5.6 3.3 1.3l1.3-1.3c-1.1-1-2.5-1.8-4.5-1.8-3.6 0-6.7 3-6.7 6.6s3.1 6.6 6.7 6.6c2 0 3.4-.6 4.6-1.9 1.2-1.2 1.6-2.9 1.6-4.2 0-.4 0-.8-.1-1.1h-6.2zm45.4 1.4c-.4-1-1.4-2.7-3.6-2.7s-4 1.7-4 4.3c0 2.4 1.8 4.3 4.2 4.3 1.9 0 3.1-1.2 3.5-1.9l-1.4-1c-.5.7-1.1 1.2-2.1 1.2s-1.6-.4-2.1-1.3l5.7-2.4-.2-.5zm-5.8 1.4c0-1.6 1.3-2.5 2.2-2.5.7 0 1.4.4 1.6.9l-3.8 1.6zM82.6 30h1.9V17.5h-1.9V30zm-3-7.3c-.5-.5-1.3-1-2.3-1-2.1 0-4.1 1.9-4.1 4.3s1.9 4.2 4.1 4.2c1 0 1.8-.5 2.2-1h.1v.6c0 1.6-.9 2.5-2.3 2.5-1.1 0-1.9-.8-2.1-1.5l-1.6.7c.5 1.1 1.7 2.5 3.8 2.5 2.2 0 4-1.3 4-4.4V22h-1.8v.7zm-2.2 5.9c-1.3 0-2.4-1.1-2.4-2.6s1.1-2.6 2.4-2.6 2.3 1.1 2.3 2.6-1 2.6-2.3 2.6zm24.4-11.1h-4.5V30h1.9v-4.7h2.6c2.1 0 4.1-1.5 4.1-3.9s-2-3.9-4.1-3.9zm.1 6h-2.7v-4.3h2.7c1.4 0 2.2 1.2 2.2 2.1-.1 1.1-.9 2.2-2.2 2.2zm11.5-1.8c-1.4 0-2.8.6-3.3 1.9l1.7.7c.4-.7 1-.9 1.7-.9 1 0 1.9.6 2 1.6v.1c-.3-.2-1.1-.5-1.9-.5-1.8 0-3.6 1-3.6 2.8 0 1.7 1.5 2.8 3.1 2.8 1.3 0 1.9-.6 2.4-1.2h.1v1h1.8v-4.8c-.2-2.2-1.9-3.5-4-3.5zm-.2 6.9c-.6 0-1.5-.3-1.5-1.1 0-1 1.1-1.3 2-1.3.8 0 1.2.2 1.7.4-.2 1.2-1.2 2-2.2 2zm10.5-6.6l-2.1 5.4h-.1l-2.2-5.4h-2l3.3 7.6-1.9 4.2h1.9l5.1-11.8h-2zm-16.8 8h1.9V17.5h-1.9V30z"
                                     fill="#fff"></path>
-                                <linearGradient id="gpA" gradientUnits="userSpaceOnUse" x1="21.795" y1="-152.295" x2="5.012"
-                                    y2="-135.513" gradientTransform="translate(0 161)">
+                                <linearGradient id="gpA" gradientUnits="userSpaceOnUse" x1="21.795" y1="-152.295"
+                                    x2="5.012" y2="-135.513" gradientTransform="translate(0 161)">
                                     <stop offset="0" stop-color="#00a0ff"></stop>
                                     <stop offset=".007" stop-color="#00a1ff"></stop>
                                     <stop offset=".26" stop-color="#00beff"></stop>
@@ -576,8 +639,8 @@
                                 </linearGradient>
                                 <path d="M10.4 7.5c-.3.3-.4.8-.4 1.4V31c0 .6.2 1.1.5 1.4l.1.1L23 20.1v-.2L10.4 7.5z"
                                     fill="url(#gpA)"></path>
-                                <linearGradient id="gpB" gradientUnits="userSpaceOnUse" x1="33.834" y1="-140.95" x2="9.637"
-                                    y2="-140.95" gradientTransform="translate(0 161)">
+                                <linearGradient id="gpB" gradientUnits="userSpaceOnUse" x1="33.834" y1="-140.95"
+                                    x2="9.637" y2="-140.95" gradientTransform="translate(0 161)">
                                     <stop offset="0" stop-color="#ffe000"></stop>
                                     <stop offset=".409" stop-color="#ffbd00"></stop>
                                     <stop offset=".775" stop-color="orange"></stop>
@@ -585,22 +648,25 @@
                                 </linearGradient>
                                 <path d="M27 24.3l-4.1-4.1v-.3l4.1-4.1.1.1 4.9 2.8c1.4.8 1.4 2.1 0 2.9l-5 2.7z"
                                     fill="url(#gpB)"></path>
-                                <linearGradient id="gpC" gradientUnits="userSpaceOnUse" x1="24.816" y1="-138.715" x2="2.058"
-                                    y2="-115.957" gradientTransform="translate(0 161)">
+                                <linearGradient id="gpC" gradientUnits="userSpaceOnUse" x1="24.816" y1="-138.715"
+                                    x2="2.058" y2="-115.957" gradientTransform="translate(0 161)">
                                     <stop offset="0" stop-color="#ff3a44"></stop>
                                     <stop offset="1" stop-color="#c31162"></stop>
                                 </linearGradient>
-                                <path d="M27.1 24.2L22.9 20 10.4 32.5c.5.5 1.2.5 2.1.1l14.6-8.4" fill="url(#gpC)"></path>
-                                <linearGradient id="gpD" gradientUnits="userSpaceOnUse" x1="7.261" y1="-160.788" x2="17.424"
-                                    y2="-150.625" gradientTransform="translate(0 161)">
+                                <path d="M27.1 24.2L22.9 20 10.4 32.5c.5.5 1.2.5 2.1.1l14.6-8.4" fill="url(#gpC)">
+                                </path>
+                                <linearGradient id="gpD" gradientUnits="userSpaceOnUse" x1="7.261" y1="-160.788"
+                                    x2="17.424" y2="-150.625" gradientTransform="translate(0 161)">
                                     <stop offset="0" stop-color="#32a071"></stop>
                                     <stop offset=".069" stop-color="#2da771"></stop>
                                     <stop offset=".476" stop-color="#15cf74"></stop>
                                     <stop offset=".801" stop-color="#06e775"></stop>
                                     <stop offset="1" stop-color="#00f076"></stop>
                                 </linearGradient>
-                                <path d="M27.1 15.8L12.5 7.5c-.9-.5-1.6-.4-2.1.1L22.9 20l4.2-4.2z" fill="url(#gpD)"></path>
-                                <path d="M27 24.1l-14.5 8.2c-.8.5-1.5.4-2 0l-.1.1.1.1c.5.4 1.2.5 2 0L27 24.1z" opacity=".2">
+                                <path d="M27.1 15.8L12.5 7.5c-.9-.5-1.6-.4-2.1.1L22.9 20l4.2-4.2z" fill="url(#gpD)">
+                                </path>
+                                <path d="M27 24.1l-14.5 8.2c-.8.5-1.5.4-2 0l-.1.1.1.1c.5.4 1.2.5 2 0L27 24.1z"
+                                    opacity=".2">
                                 </path>
                                 <path
                                     d="M10.4 32.3c-.3-.3-.4-.8-.4-1.4v.1c0 .6.2 1.1.5 1.4v-.1h-.1zm21.6-11l-5 2.8.1.1 4.9-2.8c.7-.4 1-.9 1-1.4 0 .5-.4.9-1 1.3z"
@@ -609,9 +675,9 @@
                                     d="M12.5 7.6L32 18.7c.6.4 1 .8 1 1.3 0-.5-.3-1-1-1.4l-19.5-11c-1.4-.9-2.5-.3-2.5 1.3V9c0-1.5 1.1-2.2 2.5-1.4z"
                                     opacity=".25" fill="#fff"></path>
                             </svg></a>
-    
+
                         <!-- <a><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt=""></a> -->
-    
+
                         <a href="#"><svg xmlns="http://www.w3.org/2000/svg" id="livetype" width="122" height="36"
                                 viewBox="0 0 119.66407 40">
                                 <title>Download_on_the_App_Store_Badge_US-UK_RGB_blk_4SVG_092917</title>
@@ -707,10 +773,10 @@
                                 </g>
                             </svg></a>
                     </div>
-    
+
                 </div>
-    
-    
+
+
                 <div id="foo_contact">
                     <div id="icon">
                         <i class="fas fa-phone-alt"></i>
@@ -719,12 +785,12 @@
                         <p>FOR ANY HELP YOU MAY CALL US AT
                             <br>1800-267-4444
                         </p>
-    
+
                         <p>(Monday to Saturday, 8AM to 10PM and Sunday, 10AM to 7PM)</p>
                     </div>
                 </div>
             </div>
-    
+
             <div id="foo_menu">
                 <div class="foo_menu_container">
                     <!-- <a href="#"><img src="./nykaa-logo.png" alt="nykaa logo"></a> -->
@@ -770,7 +836,7 @@
                         <li><a href="#">Nykaa Fashion</a></li>
                         <li><a href="#">Nykaa Pro</a></li>
                     </ul>
-    
+
                 </div>
                 <div class="foo_menu_container">
                     <ul>
@@ -786,10 +852,10 @@
                         <li><a href="#">Natural</a></li>
                         <li><a href="#">Luxe</a></li>
                     </ul>
-    
+
                 </div>
             </div>
-    
+
             <div id="foo_social">
                 <div id="foo_social_prod_icons">
                     <div class="product_guideline">
@@ -853,7 +919,7 @@
                     <div id="foo_social_icons_heading" style="margin-left: 20px;">
                         <h2>SHOW US SOME LOVE ❤ ON<br>SOCIAL MEDIA</h2>
                     </div>
-                    <div id="foo_social_icons" >
+                    <div id="foo_social_icons">
                         <ul>
                             <li>
                                 <a href="https://www.instagram.com/mynykaa/?ref=badge" target="_blank"><img
@@ -902,5 +968,6 @@
 
 </body>
 <script src="product_details.js"></script>
+<script src="cart.js"></script>
 
 </html>
