@@ -109,7 +109,7 @@ function delrow(index) {
   }
 }
 var pert = localStorage.getItem("cartvalue");
-// var aaa = 0;
+var aaa = 0;
 function caltotal() {
   var cart = JSON.parse(localStorage.getItem("cartProducts")) || [];
   var carval = 0;
@@ -119,9 +119,9 @@ function caltotal() {
   }
   document.getElementById("grandTotalPrice").textContent = carval;
   localStorage.setItem("cartvalue", carval);
-  // aaa = carval
+  aaa = carval;
 }
-console.log(aaa);
+
 
 function check() {
   var cart = JSON.parse(localStorage.getItem("cartProducts")) || [];
@@ -135,12 +135,10 @@ function check() {
     temp.setAttribute("class", "krp");
     alert(temp = " 30% off applied");
     //  document.getElementById("Offer").append(temp);
-    var change = (total * 3)/10;
-    // console.log(change);
-    var update_val = total-change;
-    console.log(update_val);
-    document.getElementById("grandTotalPrice").textContent = update_val;
-    localStorage.setItem("cartvalue", update_val);
+    var change = (aaa * 3) / 10;
+    var updated_val = aaa - change;
+    document.getElementById("grandTotalPrice").textContent = updated_val;
+    localStorage.setItem("cartvalue", updated_val);
   }
 }
 
