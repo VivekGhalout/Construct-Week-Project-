@@ -590,13 +590,14 @@ body {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: white;
-    background-image: url(leftimg.png);
+    background-color: none;
+    /* background-image: url(leftimg.png); */
     height: 50px;
     width: 50px;
     border-radius: 50%;
     /* border: .5px solid gray; */
     margin-top: 50px;
+    visibility: hidden;
 }
 
 .carousel-control-next-icon {
