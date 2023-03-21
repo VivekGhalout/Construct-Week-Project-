@@ -219,13 +219,15 @@
  var dataFromCart = JSON.parse(localStorage.getItem("cartProducts")) || [];
 
 // span will append number of products       
- var NumberofItems = dataFromCart.size();
- document.querySelector("#Items").append(NumberofItems);
+ var NumberofItems = localStorage.getItem("countitem")
+ document.querySelector("#Items").innerHTML = NumberofItems;
 
 
 //  span grand total
 var GT = localStorage.getItem("cartvalue");
-document.querySelector("#Grand_total").append(GT);
+console.log(GT);
+document.querySelector("#Grand_total").innerHTML = "₹ " + GT;
+
   
   
 </script>
